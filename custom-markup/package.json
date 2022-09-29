@@ -1,0 +1,82 @@
+{
+  "name": "custom-markup",
+  "version": "2.0.0",
+  "description": "Custom markup",
+  "main": "index.js",
+  "scripts": {
+    "install": "cp gulpfile.js ../../gulpfile.js"
+  },
+  "build": {
+    "source": {
+      "path": "./src",
+      "app": "/app",
+      "js": "/js",
+      "css": "/css",
+      "html": "/html",
+      "fonts": "/fonts",
+      "video": "/video",
+      "images": "/images",
+      "svg": "/svg",
+      "sprites": "/sprites"
+    },
+    "destination": {
+      "path": "./web",
+      "external_path": "./../web",
+      "app": "/js",
+      "js": "/js",
+      "css": "/css",
+      "images": "/images",
+      "fonts": "/fonts",
+      "video": "/video",
+      "sprites": "/sprites",
+      "html": ""
+    },
+    "buster": {
+      "path": "./../var"
+    },
+    "external": false
+  },
+  "dependencies": {
+    "browser-sync": "^2.18.7",
+    "browserify": "^14.4.0",
+    "babelify": "^7.3.0",
+    "vinyl-source-stream": "^1.1.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/runtime": "^7.8.3",
+    "gulp-better-rollup": "^4.0.1",
+    "rollup": "^1.29.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp": "^3.9.1",
+    "gulp-buster": "^1.1.0",
+    "gulp-cheerio": "^0.6.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sort": "^2.0.0",
+    "gulp-stylus": "^2.6.0",
+    "gulp-svgmin": "^1.2.3",
+    "gulp-twig": "^0.7.0",
+    "gulp-uglify": "^2.0.1",
+    "gulp-util": "^3.0.8",
+    "gulp.spritesmith": "^6.3.0",
+    "rupture": "^0.6.2",
+    "main-bower-files": "^2.13.1",
+    "merge": "^1.2.0",
+    "merge-stream": "^1.0.1",
+    "nib": "^1.1.2",
+    "run-sequence": "^1.2.2",
+    "streamqueue": "^1.1.1",
+    "through": "^2.3.8",
+    "gulp-nodemon": "^2.2.1"
+  }
+}

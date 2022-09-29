@@ -1,0 +1,34 @@
+.toggle {
+   cursor pointer
+   display block
+   position relative
+   margin-bottom .5em
+   padding-left (17px + 10px)
+   &__input {
+      display none
+   }
+   &__fake {
+      box-sizing border-box
+      transition $transition-main
+      position absolute
+      top (2/no-unit($size-main))em
+      left 0
+      size 17px
+      border 2px solid $color-black
+      border-radius 2px
+      background $color-white
+      &::before {
+         content ''
+         transition $transition-main
+      }
+      [type="radio"] ~ & {
+         border-radius 50%
+      }
+   }
+   &__title {}
+}
+
+.toggle_margin-bottom_none {
+   margin-bottom 0
+}
+

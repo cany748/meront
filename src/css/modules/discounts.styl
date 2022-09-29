@@ -1,0 +1,178 @@
+.discounts
+  overflow hidden
+  padding 60px 0
+  &__wrapper
+    position relative
+  &__decor
+    width 100%
+    max-width 2800px
+    position absolute
+    pointer-events none
+    user-select none
+    right 0
+
+  &__title
+    position relative
+    color $color-dark
+    font-size 48px
+    font-weight 600
+
+  &__list
+    display flex
+    flex-direction column
+    margin-top 70px
+
+.discounts-item
+  display flex
+  justify-content space-between
+  align-items center
+  border-radius 34px
+  background-color #ffeddc
+  padding 45px
+  margin 15px 0
+  &__img
+    size 230px
+    display flex
+    flex-shrink 0
+    justify-content center
+    align-items center
+    padding 0 20px
+    margin 0 auto
+
+  &__inner
+    width 580px
+    box-sizing border-box
+    position relative
+    border-radius 24px
+    background $color-white
+    padding 40px 50px 40px 30px
+
+  &__title
+    color #292930
+    font-size 24px
+    font-weight 700
+    line-height 1
+
+  &__text
+    position relative
+    color #999fae
+    padding-right 135px
+    margin-top 40px
+
+  &__link
+    display block
+    position absolute
+    color #27272e
+    font-weight 500
+    text-decoration none
+    padding-right 25px
+    right 0
+    bottom 0
+    &:hover, &.is-open
+      color $color-orange
+      &:after
+        svg-color(arrow, $color-orange)
+        right 0
+    &.is-open:after
+      transform rotate(-90deg)
+    &:after
+      content ''
+      display block
+      position absolute
+      svg(arrow, 6px, #27272e)
+      transition $transition-main
+      top 6px
+      right 5px
+
+  &__hidden
+    max-height 0
+    overflow hidden
+    color $color-orange
+    text-align right
+    &.is-open
+      max-height none
+    &.is-animate
+      transition $transition-fast
+    &:before //toggler fix)))
+      content ''
+      display block
+      height 40px
+
+  &_2
+    background-color #dcffe4
+  &_3
+    background-color #dbf8ff
+  &_reverse
+    flex-direction row-reverse
+
++do(1000)
+  .discounts
+    padding 70px 0
+    &__list
+      margin-top 50px
+  .discounts-item
+    padding 35px
+    &__img
+      size 150px
+    &__inner
+      width 500px
+      padding 40px 40px 40px 28px
+    &__title
+      font-size 22px
+    &__text
+      font-size 14px
+      padding-right 110px
+      margin-top 25px
+    &__link
+      font-size 14px
+    &__hidden
+      font-size 14px
+      &:before
+        height 15px
+
++do(850)
+  .discounts
+    padding 50px 0
+    &__title
+      font-size 32px
+    &__list
+      margin-top 20px
+
+  .discounts-item
+    padding 8px
+    margin 15px auto
+    &__img
+      size 130px
+    &__inner
+      width 350px
+      padding 20px
+    &__title
+      font-size 16px
+    &__text
+      font-size 12px
+      padding-right 0
+      margin-top 10px
+    &__link
+      width 77px
+      position relative
+      font-size 12px
+      margin-top 10px
+      right auto
+    &__hidden
+      font-size 12px
+      text-align left
+      &:before
+        height 10px
+
++do(600)
+  .discounts-item
+    margin 8px 0
+    &__img
+      size 120px
+      padding-right 0
+      padding-left 15px
+    &_2 .discounts-item__img
+      padding-right 15px
+      padding-left 0
+    &__inner
+      padding 15px

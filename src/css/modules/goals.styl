@@ -1,0 +1,75 @@
+.goals
+  position relative
+  padding 100px 0
+  &__wrapper
+    display flex
+    justify-content space-between
+    align-items center
+    position relative
+  &__decor
+    width 100%
+    max-width 2800px
+    position absolute
+    transform scale(-1, 1)
+    pointer-events none
+    user-select none
+    top 0
+    left 0
+  &__inner
+    width 545px
+    box-sizing border-box
+    background $color-white
+    border-radius 20px
+    padding 0 50px 65px 40px
+  &__title
+    font-size 22px
+    font-weight 700
+    margin-top 60px
+    &:after
+      content ''
+      size 100px 2px
+      display block
+      background #E6E6E6
+      margin 25px 0
+
+  &__text
+    color #90949A
+    font-size 18px
+  &__img
+    margin-left 20px
+
++do(1170)
+  .goals__img
+    width 350px
+
++do(1000)
+  .goals
+    &__inner
+      width 450px
+      padding 0 40px 50px 30px
+    &__title
+      font-size 20px
+      margin-top 50px
+    &__text
+      font-size 16px
+
++do(800)
+  .goals
+    &__wrapper
+      justify-content center
+    &__img
+      position absolute
+      top -20px
+      left calc(50% + 50px)
+      margin 0
+    &__title:nth-child(1), &__text:nth-child(2)
+      width 245px
+
++do(500)
+  .goals
+    &__inner
+      width 100%
+    &__img
+      left calc(50% + 20px)
+    &__title:nth-child(1), &__text:nth-child(2)
+      width 170px

@@ -1,0 +1,57 @@
+.notfound
+  position relative
+  padding 70px 0
+  &__decor
+    size 45% 569px
+    position absolute
+    pointer-events none
+    user-select none
+    top 0
+    right 0
+    & img
+      size 100%
+  &__wrapper
+    display flex
+    position relative
+  &__text
+    color $color-dark
+    font-size 18px
+    margin-top 100px
+    b
+      display block
+      font-size 38px
+  &__button
+    size 228px 50px
+    margin-top 25px
+  &__side
+    position absolute
+    top -90px
+    right -50px
+
++do(1070)
+  .notfound
+    &__decor
+      height 500px
+    &__main
+      width 345px
+    &__text
+      margin-top 40px
+    &__side
+      width 500px
+      top 5px
+      right -10px
++do(800)
+  .notfound
+    padding 40px 0 0
+    &__decor
+      display none
+    &__wrapper
+      display block
+    &__main
+      margin 0 auto
+    &__text
+      margin-top 10px
+    &__side
+      width 345px
+      position initial
+      margin 50px auto 0

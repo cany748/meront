@@ -1,0 +1,72 @@
+{
+  "name": "meront.ru",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "microlook"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "isMobile": "^0.5.0",
+    "slick-carousel": "^1.8.1",
+    "selectize": "^0.13.3",
+    "simplebar": "#",
+    "fancybox": "^3.5.7",
+    "jquery-textfill": "^0.6.2",
+    "platform.js": "^1.3.4",
+    "lazysizes": "^5.3.1"
+  },
+  "overrides": {
+    "jquery": {
+      "main": [
+        "./dist/jquery.min.js"
+      ]
+    },
+    "inputmask": {
+      "main": [
+        "./dist/jquery.inputmask.min.js"
+      ]
+    },
+    "isMobile": {
+      "main": [
+        "./src/isMobile.js"
+      ]
+    },
+    "selectize": {
+      "main": [
+        "./dist/js/standalone/selectize.min.js"
+      ]
+    },
+    "slick-carousel": {
+      "main": [
+        "slick/slick.js",
+        "slick/slick.css"
+      ]
+    },
+    "simplebar": {
+      "main": [
+        "./dist/simplebar.min.js",
+        "./dist/simplebar.min.css"
+      ]
+    },
+    "lazysizes": {
+      "main": [
+        "lazysizes.min.js"
+      ]
+    },
+    "jquery-textfill": {
+      "main": [
+        "./dist/jquery.textfill.min.js"
+      ]
+    }
+  }
+}

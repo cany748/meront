@@ -1,0 +1,80 @@
+table,
+blockquote,
+ol,
+ul,
+p {
+   margin-bottom $margin-paragraph
+   &:last-child {
+      margin-bottom 0
+   }
+}
+
+img {
+   max-width 100%
+   max-height 100%
+}
+
+i, em {
+   font-style italic
+}
+b, strong {
+   font-weight 700
+}
+
+.link,
+a {
+   color $color-link
+   transition $transition-main
+   text-decoration underline
+
+   &:hover,
+   &:active {
+      color $color-hover
+   }
+}
+
+ol {
+   counter-reset nums
+   list-style none
+   li {
+      counter-increment nums
+      list-style-type none
+      position relative
+      padding-left 20px
+      &::before {
+         content counter(nums) '.'
+         position absolute
+         font-weight 700
+         left 2px
+         color $color-main
+      }
+   }
+}
+
+//ul {
+//   li {
+//      padding-left 23px
+//      position relative
+//      &::before {
+//         content ''
+//         display block
+//         position absolute
+//         left 0
+//         top 0
+//         size 8px
+//         border-radius 50%
+//         background-color currentColor
+//      }
+//
+//   }
+//}
+
+
+.display-none {
+   display none
+}
+
+.flex-next {
+   flex-basis 100%
+   height 0
+}

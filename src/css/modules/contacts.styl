@@ -1,0 +1,243 @@
+.contacts
+  padding 90px 0
+  &__wrapper
+    position relative
+  &__decor
+    width 100%
+    max-width 2800px
+    position absolute
+    pointer-events none
+    user-select none
+    right 0
+
+  &__title
+    position relative
+    color $color-dark
+    font-size 48px
+    font-weight 600
+    &:before
+      content ''
+      size 292px 269px
+      display block
+      position absolute
+      background url("/assets/images/contacts-place.png") no-repeat
+      background-size 100%
+      top -105px
+      right 0
+
+.contacts-item
+  box-sizing border-box
+  display flex
+  flex-wrap wrap
+  justify-content space-between
+  background $color-white
+  border-radius 25px
+  box-shadow -4px 4px 13px rgba(0, 0, 0, 0.15)
+  padding 60px
+  margin 50px auto 0
+  &__title
+    color $color-dark
+    font-size 26px
+    font-weight 600
+
+  &-place
+    position relative
+    padding-left 38px
+    margin-top 30px
+    &:before
+      content ''
+      display block
+      position absolute
+      svg(place, 20px, $color-green)
+      top 3px
+      left 0
+    &__address
+      color $color-dark
+      font-weight 500
+    &__info
+      color #676767
+      font-size 12px
+
+  &__time
+    position relative
+    color $color-dark
+    font-size 14px
+    padding-left 38px
+    margin-top 20px
+    &:before
+      content ''
+      display block
+      position absolute
+      svg(time, 22px, $color-green)
+      top 6px
+      left 0
+
+  &__tel
+    display block
+    position relative
+    color $color-dark
+    text-decoration none
+    padding-left 38px
+    margin-top 20px
+    &:before
+      content ''
+      display block
+      position absolute
+      svg(tel, 20px, $color-green)
+      top 1px
+      left 0
+
+  &-routes
+    margin-top 40px
+    &__text
+      color $color-dark
+      font-size 12px
+      font-weight 500
+    &__items
+      display flex
+      margin-top 5px
+    &__item
+      size 130px 46px
+      box-sizing border-box
+      display flex
+      align-items center
+      border-radius 8px
+      font-size 12px
+      font-weight 600
+      text-decoration none
+      border 1px solid #FFA900
+      padding-left 7px
+      margin-right 10px
+      span
+        margin 0 auto
+
+  &-transports
+    width 280px
+    display flex
+    flex-wrap wrap
+    position relative
+    margin-top 50px
+    &__item
+      position relative
+      color $color-dark
+      font-size 12px
+      line-height 15px
+      font-weight 500
+      padding-left 40px
+      span
+        color #676767
+      &:before
+        content ''
+        display block
+        position absolute
+      &_bus
+        width 110px
+        &:before
+          svg(bus, 20px, $color-green)
+          top 1px
+          left 3px
+      &_trolleybus
+        margin-left auto
+        &:before
+          svg(trolleybus, 21px, $color-green)
+          top -1px
+          left 0
+      &_car
+        margin-top 45px
+        &:before
+          svg(parked-car, 34px, $color-green)
+          top 1px
+          left 0
+
+  &__maps
+    size 590px 330px
+    img
+      max-width initial
+      max-height initial
+
+  &__images
+    display flex
+    justify-content space-between
+    margin-top 20px
+    img
+      display block
+  &__direction
+    width 280px
+
+  &-images
+    display flex
+    &__big-pic
+      width 220px
+    &__list
+      margin-left 8px
+    &__item
+      width 50px
+      border 1px solid transparent
+      cursor pointer
+      transition $transition-fast
+      margin-bottom 1px
+      &:hover
+        border-color $color-green
+      &:last-child
+        margin-bottom 0
+
+  &_popup
+    margin 0
+    .contacts-item-transports
+      margin-top 30px
+      &__item_car
+        position absolute
+        margin-top 0
+        top 0
+        right -275px
+
++do(980, 1170)
+  .contacts-item_big
+    width 920px
+    padding 35px
+    .contacts-item
+      &__maps
+        size 510px 320px
+      &__direction
+        width 250px
+      &-images
+        &__big-pic
+          width 195px
+        &__item
+          width 44px
+
++do(980)
+  .contacts
+    padding 40px 0
+  .contacts__title:before
+    size 150px 138px
+    top -15px
+    right -30px
+  .contacts-item_big
+    width 100%
+    padding 25px
+    .contacts-item
+      &__view
+        width 100%
+        margin-top 50px
+      &__maps
+        width calc(100% + 50px)
+        margin-left -25px
+
++do(680)
+  .contacts-item_big
+    .contacts-item
+      &__images
+        flex-direction column
+        align-items center
+      &-images
+        margin-top 20px
+
+  .contacts-item_popup
+    padding 35px
+    .contacts-item__title
+      margin-top 20px
+    .contacts-item-transports__item_car
+        position relative
+        margin-top 10px
+        right 0

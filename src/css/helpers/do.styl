@@ -1,0 +1,37 @@
+do() {
+   $type = arguments[0]
+   _type = $type
+   $size = arguments[1]
+   _size = $size
+
+   if ( typeof(_type) == 'unit' && typeof(_size) != 'unit' ) {
+      $size = _type
+      $type = _size
+   }
+
+   if ( $type == 'min' || $type == 'miw' ) {
+      $type = 'min-width'
+      $size = ($size + 1)
+   } else if ( $type == 'mih' ) {
+      $type = 'min-height'
+      $size = ($size + 1)
+   } else if ( $type == 'mah') {
+      $type = 'max-height'
+   } else if ( $type == 'max' || $type == 'maw' || !$type ) {
+      $type = 'max-width'
+   }
+
+   if ( typeof(_type) == 'unit' && typeof(_size) == 'unit' ) {
+      @media (min-width: unit((min(_type, _size) + 1), 'px')) and (max-width: unit(max(_type, _size), 'px')) {
+         {block}
+      }
+   } else if ( $type == 'portrait' || $type == 'landscape' ) {
+      @media (orientation: unquote($type)) {
+         {block}
+      }
+   } else {
+      @media ({$type}: unit($size, 'px')) {
+         {block}
+      }
+   }
+}

@@ -1,0 +1,31 @@
+/**
+ * Правильный clearfix на основе свойста clear
+ */
+clear() {
+   if (arguments is fix) {
+      &:before,
+      &:after {
+         display table
+         content ''
+      }
+      &:after {
+         clear both
+      }
+   } else if (arguments is safe) {
+      &:before,
+      &:after {
+         display table
+         width 100%
+      }
+   } else if (arguments is none) {
+      clear none
+      &:before,
+      &:after {
+         display inline
+         width auto
+         content normal
+      }
+   } else {
+      clear arguments
+   }
+}

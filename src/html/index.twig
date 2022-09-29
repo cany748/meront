@@ -1,0 +1,359 @@
+{% extends "common/base.twig" %}
+
+{% block body_mod %}{% endblock %}
+{% block body %}
+
+<div class="base block">
+    <div class="base__wrapper block-wrapper">
+        <div class="base__decor"><img src="/assets/images/decor-2.svg" alt=""></div>
+        <div class="base__main">
+            <div class="breadcrumbs base__breadcrumbs">
+                <ul class="breadcrumbs__list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a href="#" itemprop="item"><span itemprop="name">Главная</span></a>
+                        <meta itemprop="position" content="1">
+                    </li>
+                    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a href="#" itemprop="item"><span itemprop="name">Сервис</span></a>
+                        <meta itemprop="position" content="2">
+                    </li>
+                </ul>
+            </div>
+            <h1 class="base__title">Узнайте<br>стоимость ремонта</h1>
+            <div js-selectize class="base__model selectize">
+                <select placeholder="Выберите устройство и модель">
+                    <option value=""></option>
+                    <optgroup label="iPhone">
+                        <option value=" ">iPhone 4</option>
+                        <option>iPhone 4S</option>
+                        <option value="">iPhone 5</option>
+                        <option value="iPhone 5C">iPhone 5C</option>
+                        <option value="iPhone 5S">iPhone 5S</option>
+                        <option value="iPhone 6">iPhone 6</option>
+                        <option value="iPhone 6 Plus">iPhone 6 Plus</option>
+                        <option value="iPhone 6S">iPhone 6S</option>
+                        <option value="iPhone 6S Plus">iPhone 6S Plus</option>
+                        <option value="iPhone 7">iPhone 7</option>
+                        <option value="iPhone 7 Plus">iPhone 7 Plus</option>
+                        <option value="iPhone 8">iPhone 8</option>
+                        <option value="iPhone 8 Plus">iPhone 8 Plus</option>
+                        <option value="iPhone X">iPhone X</option>
+                        <option value="iPhone XR">iPhone XR</option>
+                        <option value="iPhone XS">iPhone XS</option>
+                        <option value="iPhone XS Max">iPhone XS Max</option>
+                        <option value="iPhone 11">iPhone 11</option>
+                        <option value="iPhone 11 Pro">iPhone 11 Pro</option>
+                        <option value="iPhone 11 Pro Max">iPhone 11 Pro Max</option>
+                        <option value="iPhone 12">iPhone 12</option>
+                        <option value="iPhone 12 Pro">iPhone 12 Pro</option>
+                        <option value="iPhone 12 Pro Max">iPhone 12 Pro Max</option>
+                    </optgroup>
+                </select>
+                <button class="selectize__button"></button>
+            </div>
+            <div class="base__advantages">
+                <div class="base__advantages-item base__advantages-item_waiting">Бесплатная диагностика</div>
+                <div class="base__advantages-item base__advantages-item_clock">Ремонт за 20 мин от 390₽</div>
+                <div class="base__advantages-item base__advantages-item_shield">100% гарантия</div>
+                <div class="base__advantages-item base__advantages-item_cpu">Запчасти класса оригинал</div>
+            </div>
+            <div class="base__contacts">
+                <div class="base__contacts-title">Получи бесплатную консультацию</div>
+                <div class="base__contacts-items">
+                    <a href="" class="base__contacts-item base__contacts-item_whatsapp"></a>
+                    <a href="" class="base__contacts-item base__contacts-item_telegram"></a>
+                    <a href="" class="base__contacts-item base__contacts-item_vk"></a>
+                    <a href="tel:88432070155" class="base__contacts-item base__contacts-item_phone">8 (843) 207-01-55</a>
+                </div>
+            </div>
+            <div class="base__vendor">
+                <div class="base__vendor-title">Мы ремонтируем:</div>
+                <div class="base__vendor-items">
+                    <a href="#" class="base__vendor-item" role="button">iPhone</a>
+                    <a href="#" class="base__vendor-item base__vendor-item_active" role="button">iPad</a>
+                    <a href="#" class="base__vendor-item" role="button">Apple Watch</a>
+                    <a href="#" class="base__vendor-item" role="button">Macbook</a>
+                    <a href="#" class="base__vendor-item" role="button">Samsung</a>
+                    <a href="#" class="base__vendor-item" role="button">Xiaomi</a>
+                    <a href="#" class="base__vendor-item" role="button">Meizu</a>
+                    <a href="#" class="base__vendor-item" role="button">Huawei</a>
+                    <a href="#" class="base__vendor-item" role="button">Honor</a>
+                    <a href="#" class="base__vendor-item base__vendor-item_green" role="button">Выезд мастера</a>
+                </div>
+            </div>
+        </div>
+        <div class="base__side is-active">
+            <div class="base__product-card base-product-card">
+                <div class="base-product-card__img">
+                    <img src="/images/ipho.png" alt="">
+                </div>
+                <div class="base-product-card__name"><span>iPhone 11</span></div>
+            </div>
+            <div class="base__review-card base-review-card">
+                <div class="base-review-card__title"><span style="font-size: 25px;">ТОП</span> неисправностей</div>
+                <div class="base-review-card__items"></div>
+                <div class="base-review-card__footer">
+                    <span class="base-review-card__footer-text">Другая поломка?</span>
+                    <a href="#" class="base-review-card__footer-button">Полный прайс-лист</a>
+                </div>
+            </div>
+            <div class="base__contacts base__contacts_side">
+                <div class="base__contacts-title">Получи бесплатную консультацию</div>
+                <div class="base__contacts-items">
+                    <a href="" class="base__contacts-item base__contacts-item_whatsapp"></a>
+                    <a href="" class="base__contacts-item base__contacts-item_telegram"></a>
+                    <a href="" class="base__contacts-item base__contacts-item_vk"></a>
+                    <a href="tel:88432070155" class="base__contacts-item base__contacts-item_phone">8 (843) 207-01-55</a>
+                </div>
+            </div>
+            <div class="base__side-img">
+                <img src="/assets/images/Illustration.png" alt="">
+            </div>
+            <div class="base__advantages base__advantages_side">
+                <div class="base__advantages-item base__advantages-item_waiting">Бесплатная диагностика</div>
+                <div class="base__advantages-item base__advantages-item_clock">Ремонт за 20 мин от 390₽</div>
+                <div class="base__advantages-item base__advantages-item_shield">100% гарантия</div>
+                <div class="base__advantages-item base__advantages-item_cpu">Запчасти класса оригинал</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="advantages block">
+    <div class="advantages__wrapper block-wrapper">
+        <div class="advantages__title">Наши преимущества</div>
+        <div class="advantages__items">
+            <div class="advantages__item advantages-item advantages-item_diagnostics">
+                <div class="advantages-item__img">
+                    <img src="/assets/images/advantages-magnifier.png" alt="">
+                </div>
+                <div class="advantages-item__title">Диагностика</div>
+                <div class="advantages-item__text">Мы бесплатно проведём для<br>вас диагностику<br>даже в случае отказа</div>
+            </div>
+            <div class="advantages__item advantages-item advantages-item_timing">
+                <div class="advantages-item__img">
+                    <img src="/assets/images/advantages-clock.png" alt="">
+                </div>
+                <div class="advantages-item__title">Сроки</div>
+                <div class="advantages-item__text"><span style="font-size: 18px;">95%</span> выполняются<br>в день обращения</div>
+            </div>
+            <div class="advantages__item advantages-item advantages-item_quality">
+                <div class="advantages-item__img">
+                    <img src="/assets/images/advantages-diamond.png" alt="">
+                </div>
+                <div class="advantages-item__title">Качество</div>
+                <div class="advantages-item__text">Наша ремонтно-техническая база - одна из лучших<br>в Казани!</div>
+            </div>
+            <div class="advantages__item advantages-item advantages-item_available">
+                <div class="advantages-item__img">
+                    <img src="/assets/images/advantages-reach.png" alt="">
+                </div>
+                <div class="advantages-item__title">Доступность</div>
+                <div class="advantages-item__text">Мы работаем 7 дней в неделю,<br>365 дней в году</div>
+            </div>
+            <div class="advantages__item advantages-item advantages-item_reputation">
+                <div class="advantages-item__img">
+                    <img src="/assets/images/advantages-speach.png" alt="">
+                </div>
+                <div class="advantages-item__title">Репутация</div>
+                <div class="advantages-item__text">Нас рекомендуют<br>друзьям!</div>
+            </div>
+            <div class="advantages__item advantages-item advantages-item_pro">
+                <div class="advantages-item__img">
+                    <img src="/assets/images/advantages-pro.png" alt="">
+                </div>
+                <div class="advantages-item__title">Профессионализм</div>
+                <div class="advantages-item__text">У нас работают<br>только профессионалы!</div>
+            </div>
+            <div class="advantages__item advantages-item advantages-item_warranty">
+                <div class="advantages-item__img">
+                    <img src="/assets/images/advantages-warranty.png" alt="">
+                </div>
+                <div class="advantages-item__title">Гарантия</div>
+                <div class="advantages-item__text">По завершении ремонта мы даем гарантию на выполненную работу</div>
+            </div>
+            <div class="advantages__item advantages-item advantages-item_accessories">
+                <div class="advantages-item__img">
+                    <img src="/assets/images/advantages-battery.png" alt="">
+                </div>
+                <div class="advantages-item__title">Качественные комплектующие</div>
+                <div class="advantages-item__text">Каждую запчасть мы проверяем<br>перед установкой</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="what-repair block">
+    <div class="what-repair__wrapper block-wrapper">
+        <div class="what-repair__main">
+            <div class="what-repair__title">Мы<br>ремонтируем</div>
+            <div class="what-repair__links">
+                <a href="/service/apple/iphone" class="what-repair__link">Ремонт iPhone</a>
+                <a href="/service/apple/ipad" class="what-repair__link">Ремонт iPad</a>
+                <a href="/service/apple/watch" class="what-repair__link">Ремонт Apple Watch</a>
+                <a href="/service/apple/macbook" class="what-repair__link">Ремонт MacBook</a>
+                <a href="/service/smartphones/honor" class="what-repair__link">Ремонт Honor</a>
+                <a href="/service/smartphones/samsung" class="what-repair__link">Ремонт Samsung</a>
+                <a href="/service/smartphones/xiaomi" class="what-repair__link">Ремонт Xiaomi</a>
+                <a href="/service/smartphones/meizu" class="what-repair__link">Ремонт Meizu</a>
+                <a href="/service/smartphones/huawei" class="what-repair__link">Ремонт Huawei</a>
+                <a href="/service/smartphones/other" class="what-repair__link">Ремонт других моделей</a>
+            </div>
+        </div>
+        <div class="what-repair__background"></div>
+        <div class="what-repair__logos">
+            <div class="what-repair__logo"><img src="/assets/images/apple.png" alt="Apple"></div>
+            <div class="what-repair__logo"><img src="/assets/images/samsung.png" alt="Samsung"></div>
+            <div class="what-repair__logo"><img src="/assets/images/xiaomi.png" alt="Xiaomi"></div>
+            <div class="what-repair__logo"><img src="/assets/images/honor.png" alt="Honor"></div>
+            <div class="what-repair__logo"><img src="/assets/images/meizu.png" alt="Meizu"></div>
+            <div class="what-repair__logo"><img src="/assets/images/huawei.png" alt="Huawei"></div>
+        </div>
+    </div>
+</div>
+<div class="consultation consultation_small block">
+    <div class="consultation__wrapper block-wrapper">
+        <div class="consultation__body">
+            <div class="consultation__title">Есть вопросы?<br>Получи бесплатную консультацию</div>
+            <div class="consultation__links">
+                <a href="https://wa.me/79662506666" target="_blank" class="consultation__link consultation__link_whatsapp"></a>
+                <a href="" target="_blank" class="consultation__link consultation__link_telegram"></a>
+                <a href="https://vk.com/meront" target="_blank" class="consultation__link consultation__link_vk"></a>
+                <a href="tel:+78432070155" class="consultation__link consultation__link_phone"></a>
+            </div>
+            <a href="tel:+78432070155" class="consultation__button button button_orange">+7 (843) 207-01-55</a>
+        </div>
+    </div>
+</div>
+<div class="promotions block">
+    <div class="promotions__wrapper block-wrapper">
+        <div class="promotions__decor"></div>
+        <div class="promotions__title">Наши акции</div>
+        <div class="promotions__buttons"></div>
+        <div class="promotions__slider">
+            <div class="promotions__slide">
+                <div class="promotions__item promotions-item promotions-item_1">
+                    <div class="promotions-item__img"><img src="/assets/images/gift.png" alt=""></div>
+                    <div class="promotions-item__inner">
+                        <div class="promotions-item__top-text">Акция</div>
+                        <div class="promotions-item__title">Получи защитное стекло в подарок</div>
+                        <div class="promotions-item__text">При замене модуля iPhone получи защитное стекло в подарок</div>
+                        <a href="" class="promotions-item__link" role="button">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="promotions__slide">
+                <div class="promotions__item promotions-item promotions-item_2">
+                    <div class="promotions-item__img"><img src="/assets/images/lock.png" alt=""></div>
+                    <div class="promotions-item__inner">
+                        <div class="promotions-item__top-text">Акция</div>
+                        <div class="promotions-item__title">Ремонт под ключ.  <br>3 услуги = 1 цена!</div>
+                        <div class="promotions-item__text">При замене любых 3-х услуг получи скидку</div>
+                        <a href="" class="promotions-item__link" role="button">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="promotions__slide">
+                <div class="promotions__item promotions-item promotions-item_3">
+                    <div class="promotions-item__img"><img src="/assets/images/sale.png" alt=""></div>
+                    <div class="promotions-item__inner">
+                        <div class="promotions-item__top-text">Акция</div>
+                        <div class="promotions-item__title">40% скидка</div>
+                        <div class="promotions-item__text">Приобрети 3 услуги + 2 товара = получи 40% скидку на всю сумму</div>
+                        <a href="" class="promotions-item__link" role="button">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="how-working block">
+    <div class="how-working__wrapper block-wrapper">
+        <a js-scrolltop href="#" role="button" class="how-working__scrollTop"></a>
+        <div class="how-working__side">
+            <div class="how-working__img"><img src="/assets/images/how-working-illustration.png" alt=""></div>
+            <div class="how-working__title">Как<br>мы работаем?</div>
+        </div>
+        <div class="how-working__roadmap">
+            <div class="how-working__roadmap-points">
+                <div class="how-working__roadmap-point how-working__roadmap-point_active"></div>
+                <div class="how-working__roadmap-point"></div>
+                <div class="how-working__roadmap-point"></div>
+            </div>
+            <div class="how-working__roadmap-items">
+                <div class="how-working__roadmap-item how-working__roadmap-item_active">
+                    <b>Диагностика</b>
+                    <span>Мы бесплатно проведём для вас диагностику и согласуем стоимость ремонта</span>
+                </div>
+                <div class="how-working__roadmap-item">
+                    <b>Ремонт</b>
+                    <span>Наши опытные специалисты выполнят ремонт в кратчайшие сроки</span>
+                </div>
+                <div class="how-working__roadmap-item">
+                    <b>Уведомления</b>
+                    <span>По завершении ремонта наш сотрудник уведомит вас о готовности</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="instagram block">
+{#    <div class="instagram__decor"><img src="/assets/images/instagram-decor.svg" alt=""></div>#}
+    <div class="instagram__wrapper block-wrapper">
+        <div class="instagram__header">
+            <div class="instagram__link">
+                <img src="/assets/images/instagram.png" alt="">
+            </div>
+            <div class="instagram__title">Довольные клиенты</div>
+        </div>
+        <div class="instagram__items">
+            <div class="instagram__item"><img src="/assets/images/instagram1.png" alt=""></div>
+            <div class="instagram__item"><img src="/assets/images/instagram2.png" alt=""></div>
+            <div class="instagram__item"><img src="/assets/images/instagram3.png" alt=""></div>
+            <div class="instagram__item"><img src="/assets/images/instagram3.png" alt=""></div>
+            <div class="instagram__item"><img src="/assets/images/instagram3.png" alt=""></div>
+            <div class="instagram__item"><img src="/assets/images/instagram3.png" alt=""></div>
+            <div class="instagram__item"><img src="/assets/images/instagram3.png" alt=""></div>
+        </div>
+    </div>
+</div>
+<div class="consultation consultation_big consultation_gray block">
+    <div class="consultation__wrapper block-wrapper">
+        <div class="consultation__title consultation__title">Запись на ремонт / консультация</div>
+        <div class="consultation__body">
+            <div class="consultation__links">
+                <a href="https://wa.me/79662506666" class="consultation__link consultation__link_whatsapp"></a>
+                <a href="" class="consultation__link consultation__link_telegram"></a>
+                <a href="https://vk.com/meront" class="consultation__link consultation__link_vk"></a>
+                <a href="tel:+78432070155" class="consultation__link consultation__link_phone"></a>
+            </div>
+            <div class="consultation__buttons">
+                <a href="#" class="consultation__button button">Позвоните мне</a>
+                <span>или</span>
+                <a href="tel:+78432070155" class="consultation__button button button_orange">+7 (843) 207-01-55</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div itemprop="articleBody" class="description block">
+    <div class="description__wrapper block-wrapper">
+        <div class="description__text">
+            <h2>Замена стекла iPhone</h2>
+            <br>
+            Замена стекла айфона является одной из популярнейших услуг, предоставляемых сервисом. Ежедневно в руках мастеров, попадают десятки мобильных телефонов, ранее имеющих повреждения механического характера. Как и многие другие виды ремонтных услуг, доступных у нас, замена стекла iPhone осуществляется всего
+            в течение часа.
+            <br>
+            <br>
+            Замена стекла айфона является одной из популярнейших услуг, предоставляемых сервисом. Ежедневно в руках мастеров, попадают десятки мобильных телефонов, ранее имеющих повреждения механического характера. Как и многие другие виды ремонтных услуг, доступных у нас, замена стекла iPhone осуществляется всего
+            в течение часа.
+        </div>
+        <div class="description__decor"><img src="/assets/images/hand.png" alt=""></div>
+        <div class="description__links">
+            <div class="description__prompt">Поделиться</div>
+            <a href="" target="_blank" class="description__link description__link_facebook"></a>
+            <a href="" target="_blank" class="description__link description__link_twitter"></a>
+            <a href="" target="_blank" class="description__link description__link_vk"></a>
+            <a href="" target="_blank" class="description__link description__link_instagram"></a>
+            <a href="" target="_blank" class="description__link description__link_tiktok"></a>
+        </div>
+    </div>
+</div>
+{% endblock %}

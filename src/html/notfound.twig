@@ -1,0 +1,16 @@
+{% extends "common/base.twig" %}
+
+{% block body_mod %}{% endblock %}
+{% block body %}
+    <div class="notfound block">
+        <div class="notfound__decor"><img src="/assets/images/decor-2.svg" alt=""></div>
+        <div class="notfound__wrapper block-wrapper">
+            <div class="notfound__main">
+                <div class="notfound__img"><img src="/assets/images/404.png" alt=""></div>
+                <div class="notfound__text"><b>Упс!</b>Что-то пошло не так.<br>Мы уже решаем проблему.</div>
+                <a href="/" class="button button_orange button_nobg notfound__button">Перейти на главную</a>
+            </div>
+            <div class="notfound__side"><img src="/assets/images/404-2.png" alt=""></div>
+        </div>
+    </div>
+{% endblock %}

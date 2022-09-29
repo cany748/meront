@@ -1,0 +1,9 @@
+flex-column($size, $columns = 1, $margin = 0px) {
+  if ( $size != $columns ) {
+    flex-basis unquote('calc('+ ((100/$columns)*$size) +'% - '+ ($margin*2) +')')
+    max-width @flex-basis
+  } else {
+    flex-basis 100%
+    max-width none
+  }
+}

@@ -1,0 +1,153 @@
+.layer {
+  display flex
+  flex 1 0 auto
+  min-height 100%
+  box-sizing border-box
+  //position fixed
+  position absolute
+  background #fff
+  opacity 0
+  transform translateY(5vh)
+  transition $transition-main
+  z-index 1200
+  top 0
+  right 0
+  left 0
+  &__inside {
+    width 100%
+    flex 1 0 auto
+    box-sizing border-box
+    padding 50px 0
+    +do(1000) {
+      padding 30px 0
+    }
+  }
+  //&__header {
+  //   box-sizing border-box
+  //   position relative
+  //   margin-bottom 50px
+  //   +do(1000) {
+  //      margin-bottom 30px
+  //   }
+  //   +do(750) {
+  //      padding-right 40px
+  //   }
+  //}
+  &__content {
+    box-sizing border-box
+    overflow hidden
+    width 100%
+  }
+  //&__footer {
+  //   box-sizing border-box
+  //   margin-top auto
+  //}
+  //&__title {
+  //   @extend $title-h1
+  //
+  //   &_xsmall {
+  //
+  //   }
+  //}
+
+  &.is-aside {
+    transition $transition-main
+    transform translateX(-100%)
+    margin-right auto
+    &.is-opened {
+      transition $transition-main
+    }
+    &_right {
+      transform translateX(100%)
+      margin-right initial
+      margin-left auto
+    }
+    //Обязательно нужно четко указать width
+  }
+  &.is-opened {
+    opacity 1
+    z-index 1210
+    transform translate(0, 0)
+  }
+  &:not(.is-animating) {
+    transform none
+    position relative
+  }
+  &.is-faded {
+    position fixed
+    opacity 0
+  }
+  &.is-closing {
+    position fixed
+    z-index 1210
+  }
+  &:not(.is-initialized) {
+    display none !important
+  }
+}
+
+.layer-close {
+  position absolute
+  border none
+  padding 10px
+  top 30px
+  right 30px
+  &::before {
+    content ''
+    display block
+    svg('cross', 20px, #B3B3B3)
+  }
+  +do(580) {
+    top 20px
+    right 20px
+  }
+}
+
+.layer_overlay {
+  align-items center
+  justify-content center
+  background none
+  pointer-events none
+  //+do(750) {
+  //  align-items stretch
+  //  padding-top 0
+  //  padding-bottom 0
+  //}
+  .layer {
+    &__inside {
+      //width 100%
+      max-width 570px
+      flex 1 0 auto
+      box-sizing border-box
+      position relative
+      background $color-white
+      pointer-events auto
+      border-radius 25px
+      padding 120px 90px
+      //+do(750) {
+      //  max-width none
+      //  width 100%
+      //  margin 0
+      //  border-radius 0
+      //}
+      +do(580) {
+        max-width 335px
+        padding 50px 40px
+      }
+    }
+    &__content {
+      width auto
+    }
+  }
+
+  &.is-opened {
+    transform none
+  }
+  &_left {
+    transform translateX(-100%)
+    justify-content flex-start
+    &.is-opened {
+      transform translate(0, 0)
+    }
+  }
+}

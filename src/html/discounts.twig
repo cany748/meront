@@ -1,0 +1,35 @@
+{% extends "common/base.twig" %}
+
+{% block body_mod %}{% endblock %}
+{% block body %}
+<div class="discounts block">
+    <div class="discounts__decor"><img src="/assets/images/decor.svg" alt=""></div>
+    <div class="discounts__wrapper block-wrapper">
+        <div class="discounts__title">Акции</div>
+        <div class="discounts__list">
+            <div class="discounts__item discounts-item discounts-item_1">
+                <div class="discounts-item__inner">
+                    <div class="discounts-item__title">Получи защитное<br>стекло в подарок</div>
+                    <div class="discounts-item__text">При замене модуля iPhone получи защитное стекло в подарок<a href="" class="discounts-item__link" role="button">Подробнее</a></div>
+                </div>
+                <div class="discounts-item__img"><img src="/assets/images/gift.png" alt=""></div>
+            </div>
+            <div class="discounts__item discounts-item discounts-item_2 discounts-item_reverse">
+                <div class="discounts-item__inner">
+                    <div class="discounts-item__title">Ремонт под ключ.<br>3 услуги = 1 цена!</div>
+                    <div class="discounts-item__text">При замене любых 3-х услуг получи скидку<a href="#" class="discounts-item__link" role="button" js-toggler data-toggler-animate="true" data-toggler="14">Подробнее</a></div>
+                    <div class="discounts-item__hidden" js-toggler-target data-toggler="14">При единовременной покупке услуг в количестве, кратном 3 – один товар из трех, имеющих наименьшую цену, покупатель получает в подарок.</div>
+                </div>
+                <div class="discounts-item__img"><img src="/assets/images/lock.png" alt=""></div>
+            </div>
+            <div class="discounts__item discounts-item discounts-item_3">
+                <div class="discounts-item__inner">
+                    <div class="discounts-item__title">40% скидка</div>
+                    <div class="discounts-item__text">Приобрети 3 услуги + 2 товара = получи 40% скидку на всю сумму<a href="" class="discounts-item__link" role="button">Подробнее</a></div>
+                </div>
+                <div class="discounts-item__img"><img src="/assets/images/sale.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

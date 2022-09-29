@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    {% set asset_version = '0001' %}
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="address=no">
+        <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+        <link rel="shortcut icon" href="favicon.ico">
+
+
+        {% block stylesheets %}
+            <link rel="stylesheet" href="css/vendor.css?{{ asset_version }}">
+            <link rel="stylesheet" href="css/common.css?{{ asset_version }}">
+        {% endblock %}
+
+        {% block javascripts %}
+            <script src="js/vendor.js?{{ asset_version }}"></script>
+            <script src="js/common.js?{{ asset_version }}"></script>
+        {% endblock %}
+
+    </head>
+    <body class="body {% block bodyMod %}{% endblock %}">
+        <div class="body__wrapper">
+            <div class="body__header">
+                {% include '../common/header.twig' %}
+            </div>
+            <div class="body__content">
+                {% block body %}{% endblock %}
+            </div>
+            <div class="body__footer">
+                {% include '../common/footer.twig' %}
+            </div>
+        </div>
+
+        {% include '../common/layers.twig' %}
+
+        <script>
+            app.start()
+        </script>
+{#    TODO попробовать переделать виджеты джинкор#}
+{#    TODO сверстать блок с видео#}
+    </body>
+</html>

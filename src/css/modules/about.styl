@@ -1,0 +1,96 @@
+.about
+  padding-bottom 100px
+  &__text
+    width 560px
+    color $color-dark
+    font-size 18px
+    font-weight 500
+  &__row
+    display flex
+    justify-content space-between
+    align-items center
+    position relative
+    margin-top 100px
+  &__quote
+    width 630px
+    position relative
+    color $color-dark
+    font-size 32px
+    line-height 1.4
+    font-weight 600
+    padding-left 130px
+    margin-right 15px
+    &:before
+      content ''
+      display block
+      position absolute
+      svg(quote-left, 43px, $color-orange)
+      top 10px
+      left 0
+  &__img
+    &_2
+      margin-right 20px
+      margin-left 70px
+
++do(1170)
+  .about
+    padding-top 160px
+
++do(1000)
+  .about
+    &__quote
+      font-size 26px
+      padding-left 100px
+    &:before
+      left 20px
+    &__img_2
+      margin-left 0
+    &__text_2
+      font-size 16px
+
++do(800)
+  .about
+    padding-top 60px
+    &__quote
+      width 400px
+      font-size 20px
+    &__img_1
+      width 170px
+    &__text_2
+      width auto
+    &__img_2
+      flex-shrink 0
+      margin-left -100px
+
++do(700)
+  .about__quote
+    padding-top 70px
+    padding-left 0
+    &:before
+      top 0
+      left 0
+
++do(600)
+  .about__text_1
+    width auto
+    font-size 16px
+  .about__text_2
+    font-size 14px
+  .about__quote
+    width auto
+    margin 0
+  .about__img_1
+    width 130px
+    position absolute
+    top -80px
+    right 0
++do(500)
+  .about__img_2
+    width 200px
+    margin-left -100px
+    margin-right 10px
++do(400)
+  .about__text_1
+    font-size 14px
+  .about__quote
+    font-size 18px

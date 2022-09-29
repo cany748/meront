@@ -1,0 +1,135 @@
+svg(name, size = 16px, color = #fff, align = null, targetColor = '%23xxx') {
+   // Ищем объект с данными svg
+   $image = $svg[name]
+
+   // Если нашли картинку
+   if ( $image ) {
+      // Получаем заданную нами ширину и высоту
+      // size = str-split(''+size+'', ' ')
+      $width = convert(''+size+'')
+      $height = unit(round(($width * $image['height']) / $image['width']), 'px')
+      // height = convert(!size[1] ? size[0] : size[1]) // Если нету высоты, то приравниваем к ширине
+
+      if ( align ) {
+         horizontal = align[0]
+         vertical = align[1] ? align[1] : align[0]
+         position absolute if !@position
+         if horizontal is center {
+            margin-left round($width / -2)
+            left 50%
+         } else if (horizontal is left) {
+            left 0
+         } else if (horizontal is right) {
+            right 0
+         }
+
+         if (vertical is center) {
+            margin-top round($height / -2)
+            top 50%
+         } else if (vertical is top) {
+            top 0
+         } else if (vertical is bottom) {
+            bottom 0
+         }
+      }
+
+      $bg = str-replace($image['icon'], targetColor, str-replace(color, '#', '%23'))
+      // _cache = '$svg_bg-'+name+'--'+str-replace(color, '#', '')+'_'+unit(size, '')
+      _cache = '$svg_bg-'+name+'--'+str-replace(color, '#', '')
+
+      width $width
+      height $height
+
+      if ( called-from != 'do' ) {
+         +cache(_cache) {
+            background url('data:image/svg+xml;charset=utf-8,'$bg) 0 0 no-repeat
+            background-size 100% 100%
+         }
+      }
+      else {
+         background url('data:image/svg+xml;charset=utf-8,'$bg) 0 0 no-repeat
+         background-size 100% 100%
+      }
+
+   } else {
+      // Иначе ошибка
+      error('\n\n\n Нету такого svg `'+name+'` \n\n')
+   }
+}
+
+svg-color(name, color = #fff, targetColor = '%23xxx') {
+   // Ищем объект с данными svg
+   $image = $svg[name]
+
+   if ( $image ) {
+      $bg = str-replace($image['icon'], targetColor, str-replace(color, '#', '%23'))
+      // _cache = '$svg_bg-'+name+'--'+str-replace(color, '#', '')+'_'+unit(size, '')
+      _cache = '$svg_bg-'+name+'--'+str-replace(color, '#', '')
+
+      if ( called-from != 'do' ) {
+         +cache(_cache) {
+            background-image url('data:image/svg+xml;charset=utf-8,'$bg)
+         }
+      }
+      else {
+         background-image url('data:image/svg+xml;charset=utf-8,'$bg)
+      }
+
+   } else {
+      // Иначе ошибка
+      error('\n\n\n Нету такого svg `'+name+'` \n\n')
+   }
+}
+
+svg-size(name, size = 16px, align = null) {
+   $image = $svg[name]
+   if ( $image ) {
+      $width = convert(''+size+'')
+      $height = unit(round(($width * $image['height']) / $image['width']), 'px')
+
+      width $width
+      height $height
+
+      if ( align ) {
+         horizontal = align[0]
+         vertical = align[1] || align[0]
+         position absolute if !@position
+         if horizontal is center {
+            margin-left round($width / -2)
+            left 50%
+         } else if (horizontal is left) {
+            left 0
+            margin-left 0
+         } else if (horizontal is right) {
+            right 0
+            margin-left 0
+         }
+
+         if (vertical is center) {
+            margin-top round($height / -2)
+            top 50%
+         } else if (vertical is top) {
+            top 0
+            margin-top 0
+         } else if (vertical is bottom) {
+            bottom 0
+            margin-top 0
+         }
+      }
+   } else {
+      // Иначе ошибка
+      error('\n\n\n Нету такого svg `'+name+'` \n\n')
+   }
+}
+svg-height(name, size = 16px) {
+   $image = $svg[name]
+   if ( $image ) {
+      $width = convert(''+size+'')
+      $height = unit(round(($width * $image['height']) / $image['width']), 'px')
+
+      return $height
+   } else {
+      // Иначе ошибка
+      error('\n\n\n Нету такого svg `'+name+'` \n\n')
+   }
+}

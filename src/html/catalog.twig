@@ -1,0 +1,303 @@
+{% extends "common/base.twig" %}
+
+{% block body_mod %}{% endblock %}
+{% block body %}
+<div class="base block">
+    <div class="base__wrapper block-wrapper">
+        <div class="base__main">
+            <div class="breadcrumbs base__breadcrumbs">
+                <ul class="breadcrumbs__list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a href="#" itemprop="item"><span itemprop="name">Главная</span></a>
+                        <meta itemprop="position" content="1">
+                    </li>
+                    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a href="#" itemprop="item"><span itemprop="name">Ремонт телефонов</span></a>
+                        <meta itemprop="position" content="2">
+                    </li>
+                </ul>
+            </div>
+            <h1 class="base__title">Ремонт Apple в Казани</h1>
+            <div class="base__model selectize">
+                <div js-selectize class="base__model selectize">
+                    <select placeholder="Выберите устройство и модель">
+                        <option value=""></option>
+                        <optgroup label="iPhone">
+                            <option value="/service/apple/remont-iphone/iphone-12-pro-max">iPhone 12 Pro Max</option>
+                            <option value="/service/apple/remont-iphone/iphone-12-pro">iPhone 12 Pro</option>
+                            <option value="/service/apple/remont-iphone/iphone-12">iPhone 12</option>
+                            <option value="/service/apple/remont-iphone/iphone-12-mini">iPhone 12 mini</option>
+                            <option value="/service/apple/remont-iphone/iphone-11-pro-max">iPhone 11 Pro Max</option>
+                            <option value="/service/apple/remont-iphone/iphone-11-pro">iPhone 11 Pro</option>
+                            <option value="/service/apple/remont-iphone/iphone-11">iPhone 11</option>
+                            <option value="/service/apple/remont-iphone/iphone-se-2">iPhone SE 2</option>
+                            <option value="/service/apple/remont-iphone/iphone-xr">iPhone XR</option>
+                            <option value="/service/apple/remont-iphone/iphone-xs-max">iPhone Xs Max</option>
+                            <option value="/service/apple/remont-iphone/iphone-xs">iPhone Xs</option>
+                            <option value="/service/apple/remont-iphone/iphone-x">iPhone X</option>
+                            <option value="/service/apple/remont-iphone/iphone-8-plus">iPhone 8 Plus</option>
+                            <option value="/service/apple/remont-iphone/iphone-8">iPhone 8</option>
+                            <option value="/service/apple/remont-iphone/iphone-7-plus">iPhone 7 Plus</option>
+                            <option value="/service/apple/remont-iphone/iphone-7">iPhone 7</option>
+                            <option value="/service/apple/remont-iphone/iphone-6s-plus">iPhone 6s Plus</option>
+                            <option value="/service/apple/remont-iphone/iphone-6s">iPhone 6s</option>
+                            <option value="/service/apple/remont-iphone/iphone-6-plus">iPhone 6 Plus</option>
+                            <option value="/service/apple/remont-iphone/iphone-6">iPhone 6</option>
+                            <option value="/service/apple/remont-iphone/iphone-se">iPhone SE</option>
+                            <option value="/service/apple/remont-iphone/iphone-5-5c-5s">iPhone 5/5C/5s</option>
+                            <option value="/service/apple/remont-iphone/iphone-4-4s">iPhone 4/4s</option></optgroup>
+                    </select>
+                    <button class="selectize__button"></button>
+                </div>
+            </div>
+            <div class="base__advantages">
+                <div class="base__advantages-item base__advantages-item_waiting">Бесплатная диагностика</div>
+                <div class="base__advantages-item base__advantages-item_clock">Ремонт за 20 мин от 390₽</div>
+                <div class="base__advantages-item base__advantages-item_shield">100% гарантия</div>
+                <div class="base__advantages-item base__advantages-item_cpu">Запчасти класса оригинал</div>
+            </div>
+            <div class="base__contacts">
+                <div class="base__contacts-title">Получи бесплатную консультацию</div>
+                <div class="base__contacts-items">
+                    <a href="" class="base__contacts-item base__contacts-item_whatsapp"></a>
+                    <a href="" class="base__contacts-item base__contacts-item_telegram"></a>
+                    <a href="" class="base__contacts-item base__contacts-item_vk"></a>
+                    <a href="tel:88432070155" class="base__contacts-item base__contacts-item_phone">8 (843) 207-01-55</a>
+                </div>
+            </div>
+        </div>
+        <div class="base__side">
+            <div class="base__side-decor {#base__side-decor_small#}">
+                <img src="/images/base.svg" alt="">
+            </div>
+            <div class="base__side-img">
+                <img src="/images/Illustration.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="catalog block">
+    <div class="catalog__wrapper block-wrapper">
+        <div class="catalog__title">Полный прайс-лист</div>
+        <div class="catalog__relevance">Актуальный прайс лист - на 22 мая 2020г.</div>
+        <div class="catalog__tabs">
+            <button js-tabby-tab data-tabby="catalog:1" class="button catalog__tab is-active">Аппаратный ремонт</button>
+            <button js-tabby-tab data-tabby="catalog:2" class="button catalog__tab">Восстановление платы</button>
+            <button js-tabby-tab data-tabby="catalog:3" class="button catalog__tab">Программный ремонт</button>
+            <button js-tabby-tab data-tabby="catalog:4" class="button catalog__tab">Защитные стекла</button>
+        </div>
+        <div class="catalog__separator"></div>
+        <div class="catalog__section">
+            <div class="catalog__main">
+                <div class="catalog__item catalog-item catalog-item_static is-active">
+                    <div class="catalog-item__checkbox"><input type="checkbox" disabled checked></div>
+                    <div class="catalog-item__static-text catalog-item__static-text_diagnostics">Бесплатная диагностика</div>
+                    <div class="catalog-item__static-text catalog-item__static-text_full-construction">Ремонт под ключ (запчасти + работа)</div>
+                    <div class="catalog-item__price">0₽</div>
+                </div>
+                <div js-tabby-panel data-tabby="catalog:1" class="catalog__panel is-active">
+                    <div js-catalog-item="" class="catalog__item catalog-item" data-id="500" data-warranty="3" data-time="120" data-price="1790" data-price-old="2290">
+                        <div class="catalog-item__checkbox"><input js-catalog-item-input="" type="checkbox" data-com.bitwarden.browser.user-edited="yes"></div>
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__name">Разбито стекло
+                                <div class="catalog__question catalog-question">
+                                    <div class="catalog-question__pop-up">Запчасть максимально приближенная по качеству к оригиналу, с минимальным отличием в цветопередаче.</div>
+                                </div>
+                            </div>
+                            <div class="catalog-item__description">Замена стекла iPad 2/3/4</div>
+                        </div>
+                        <div class="catalog-item__warranty">
+                            <div class="catalog-item__warranty-text">Гарантия</div>
+                            <div class="catalog-item__warranty-number">3 мес</div>
+                        </div>
+                        <div class="catalog-item__time">
+                            <div class="catalog-item__time-text">Сроки</div>
+                            <div class="catalog-item__time-number">2 час</div>
+                        </div>
+                        <div class="catalog-item__price">
+                            <div class="catalog-item__price-old">2 290 ₽</div>
+                            <div class="catalog-item__price-current">1 790 ₽</div>
+                        </div>
+                    </div>
+                    <div js-catalog-item="" class="catalog__item catalog-item" data-id="501" data-warranty="3" data-time="120" data-price="4490" data-price-old="4790">
+                        <div class="catalog-item__checkbox"><input js-catalog-item-input="" type="checkbox" data-com.bitwarden.browser.user-edited="yes"></div>
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__name">Не показывает дисплей</div>
+                            <div class="catalog-item__description">Замена дисплея iPad 2/3/4</div>
+                        </div>
+                        <div class="catalog-item__warranty">
+                            <div class="catalog-item__warranty-text">Гарантия</div>
+                            <div class="catalog-item__warranty-number">3 мес</div>
+                        </div>
+                        <div class="catalog-item__time">
+                            <div class="catalog-item__time-text">Сроки</div>
+                            <div class="catalog-item__time-number">2 час</div>
+                        </div>
+                        <div class="catalog-item__price">
+                            <div class="catalog-item__price-old">4 790 ₽</div>
+                            <div class="catalog-item__price-current">4 490 ₽</div>
+                        </div>
+                    </div>
+                    <div js-catalog-item="" class="catalog__item catalog-item" data-id="502" data-warranty="3" data-time="120" data-price="1690" data-price-old="2090">
+                        <div class="catalog-item__checkbox"><input js-catalog-item-input="" type="checkbox"></div>
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__name">Не работает кнопка Home</div>
+                            <div class="catalog-item__description">Замена кнопки Home iPad 2/3/4</div>
+                        </div>
+                        <div class="catalog-item__warranty">
+                            <div class="catalog-item__warranty-text">Гарантия</div>
+                            <div class="catalog-item__warranty-number">3 мес</div>
+                        </div>
+                        <div class="catalog-item__time">
+                            <div class="catalog-item__time-text">Сроки</div>
+                            <div class="catalog-item__time-number">2 час</div>
+                        </div>
+                        <div class="catalog-item__price">
+                            <div class="catalog-item__price-old">2 090 ₽</div>
+                            <div class="catalog-item__price-current">1 690 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div js-tabby-panel data-tabby="catalog:2" class="catalog__panel">
+                    <div js-catalog-item="" class="catalog__item catalog-item" data-id="503" data-warranty="3" data-time="120" data-price="1690" data-price-old="2090">
+                        <div class="catalog-item__checkbox"><input js-catalog-item-input="" type="checkbox"></div>
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__name">Не заряжается</div>
+                            <div class="catalog-item__description">Замена шлейфа системного разъема iPad 2/3/4</div>
+                        </div>
+                        <div class="catalog-item__warranty">
+                            <div class="catalog-item__warranty-text">Гарантия</div>
+                            <div class="catalog-item__warranty-number">3 мес</div>
+                        </div>
+                        <div class="catalog-item__time">
+                            <div class="catalog-item__time-text">Сроки</div>
+                            <div class="catalog-item__time-number">2 час</div>
+                        </div>
+                        <div class="catalog-item__price">
+                            <div class="catalog-item__price-old">2 090 ₽</div>
+                            <div class="catalog-item__price-current">1 690 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div js-tabby-panel data-tabby="catalog:3" class="catalog__panel">
+                    <div js-catalog-item="" class="catalog__item catalog-item" data-id="505" data-warranty="3" data-time="120" data-price="1890" data-price-old="2290">
+                        <div class="catalog-item__checkbox"><input js-catalog-item-input="" type="checkbox"></div>
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__name">Не работают наушники</div>
+                            <div class="catalog-item__description">Замена шлейфа аудио разъема iPad 2/3/4</div>
+                        </div>
+                        <div class="catalog-item__warranty">
+                            <div class="catalog-item__warranty-text">Гарантия</div>
+                            <div class="catalog-item__warranty-number">3 мес</div>
+                        </div>
+                        <div class="catalog-item__time">
+                            <div class="catalog-item__time-text">Сроки</div>
+                            <div class="catalog-item__time-number">2 час</div>
+                        </div>
+                        <div class="catalog-item__price">
+                            <div class="catalog-item__price-old">2 290 ₽</div>
+                            <div class="catalog-item__price-current">1 890 ₽</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog__sub">
+                <div class="catalog__selected catalog-selected">
+                    <div class="catalog-selected__title">Выбранные услуги</div>
+                    <div class="catalog-selected__items"></div>
+                    <div class="catalog-selected__info catalog-selected-info">
+                        <div class="catalog-selected-info__additional">
+                            <div class="catalog-selected-info__additional-checkbox"><input type="checkbox"></div>
+                            <div class="catalog-selected-info__additional-text">Выезд мастера</div>
+                            <div class="catalog-selected-info__additional-number">+ 500₽</div>
+                        </div>
+                        <div class="catalog-selected-info__warranty">
+                            <div class="catalog-selected-info__warranty-text">Гарантия</div>
+                            <div class="catalog-selected-info__warranty-number">1 год</div>
+                        </div>
+                        <div class="catalog-selected-info__time">
+                            <div class="catalog-selected-info__time-text">Сроки</div>
+                            <div class="catalog-selected-info__time-number">20 мин</div>
+                        </div>
+                        <div class="catalog-selected-info__price">
+                            <div class="catalog-selected-info__price-text">К оплате:</div>
+                            <div class="catalog-selected-info__price-old">3 000₽</div>
+                            <div class="catalog-selected-info__price-current">2 490₽</div>
+                        </div>
+                        <button class="button catalog-selected-info__button">Заказать</button>
+                    </div>
+                </div>
+                <div class="catalog__selected catalog-selected catalog-selected_fixed is-hide">
+                    <div class="catalog-selected__title">Итого:</div>
+                    <div class="catalog-selected-info__price">
+                        <div class="catalog-selected-info__price-old"></div>
+                        <div class="catalog-selected-info__price-current"></div>
+                    </div>
+                    <button class="button catalog-selected-info__button">Заказать</button>
+                </div>
+                <div class="catalog__consultation catalog-consultation">
+                    <div class="catalog-consultation__title">Остались вопросы?</div>
+                    <div class="catalog-consultation__text">Получи бесплатную консультацию по телефону</div>
+                    <div class="button button_orange catalog-consultation__button">+7 (843) 207 - 01 - 55</div>
+                    <div class="catalog-consultation__text catalog-consultation__text_small">или через мессенджер:</div>
+                    <div class="catalog-consultation__links">
+                        <a href="" class="catalog-consultation__link catalog-consultation__link_whatsapp"></a>
+                        <a href="" class="catalog-consultation__link catalog-consultation__link_telegram"></a>
+                        <a href="" class="catalog-consultation__link catalog-consultation__link_vk"></a>
+                    </div>
+                </div>
+{#                <div class="catalog-banner-1"><span>99%</span>ремонта выполняется<br>в день обращения</div>#}
+                <div class="catalog-banner-2"><span>5% </span>скидка<br>на защитные стекла <br>Remax и Elephant<img src="/assets/images/protective-glasses.png" alt=""></div>
+                <div class="catalog-banner-3">Вернем
+                    <div class="catalog__question catalog-question">
+                        <div class="catalog-question__pop-up">Вернём стоимость переплаты. Нашли дешевле?
+                            Вернём 110% от переплаты!
+                            К примеру наша услуга обошлась в 1200 руб, а вы нашли за 1000 руб. Мы вам вернём 220 руб. Действует в течении 10 дней.</div>
+                    </div>
+                    <br><span>110%</span><br>за переплату!<img src="/assets/images/piggybank.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="consultation consultation_big consultation_gray block">
+    <div class="consultation__wrapper block-wrapper">
+        <div class="consultation__title consultation__title">Запись на ремонт / консультация</div>
+        <div class="consultation__body">
+            <div class="consultation__links">
+                <a href="" class="consultation__link consultation__link_whatsapp"></a>
+                <a href="" class="consultation__link consultation__link_telegram"></a>
+                <a href="" class="consultation__link consultation__link_vk"></a>
+                <a href="" class="consultation__link consultation__link_phone"></a>
+            </div>
+            <div class="consultation__buttons">
+                <a href="#" class="consultation__button button">Позвоните мне</a>
+                <span>или</span>
+                <a href="tel:88432070155" class="consultation__button button button_orange">+7 (843) 207 - 01 - 55</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div itemprop="articleBody" class="description block">
+    <div class="description__wrapper block-wrapper">
+        <div class="description__text">
+            <h2>Замена стекла iPhone</h2>
+            <br>
+            Замена стекла айфона является одной из популярнейших услуг, предоставляемых сервисом. Ежедневно в руках мастеров, попадают десятки мобильных телефонов, ранее имеющих повреждения механического характера. Как и многие другие виды ремонтных услуг, доступных у нас, замена стекла iPhone осуществляется всего
+            в течение часа.
+            <br>
+            <br>
+            Замена стекла айфона является одной из популярнейших услуг, предоставляемых сервисом. Ежедневно в руках мастеров, попадают десятки мобильных телефонов, ранее имеющих повреждения механического характера. Как и многие другие виды ремонтных услуг, доступных у нас, замена стекла iPhone осуществляется всего
+            в течение часа.
+        </div>
+        <div class="description__decor"><img src="/images/hand.png" alt=""></div>
+        <div class="description__links">
+            <div class="description__prompt">Поделиться</div>
+            <a href="" class="description__link description__link_facebook"></a>
+            <a href="" class="description__link description__link_twitter"></a>
+            <a href="" class="description__link description__link_vk"></a>
+            <a href="" class="description__link description__link_instagram"></a>
+            <a href="" class="description__link description__link_tiktok"></a>
+        </div>
+    </div>
+</div>
+{% endblock %}

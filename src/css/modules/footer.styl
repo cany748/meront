@@ -1,0 +1,139 @@
+.footer
+  position relative
+  &__top
+    padding-top 65px
+    padding-bottom 35px
+    & .footer__wrapper
+      display flex
+      flex-wrap wrap
+      justify-content space-between
+
+  &__bottom
+    color $color-dark
+    font-size 12px
+    font-weight 400
+    background $color-white
+    padding 21px 0
+    & .footer__wrapper
+      display flex
+      flex-wrap wrap
+      align-items center
+    &_mobile
+      display none
+
+  &__columns
+    width 345px
+    display flex
+    justify-content space-between
+    margin 0 auto
+
+  &__column
+    display flex
+    flex-direction column
+
+  &__copyright
+    margin-right 123px
+  &__rights
+    margin-right 150px
+  &__payments
+    font-size 0
+    margin 0 7px
+  &__policy
+    color $color-dark
+    margin-left 15px
+
+.footer-item
+  display flex
+  flex-direction column
+  align-items flex-start
+  &__title
+    display block
+    color $color-dark
+    font-weight 600
+    margin-bottom 16px
+
+  &__link
+    display block
+    color $color-dark
+    padding 8px 0
+
+  &__place
+    display block
+    position relative
+    color $color-dark
+    line-height 20px
+    padding 11px 0 11px 25px
+    &:before
+      content ''
+      display block
+      position absolute
+      svg(place, 15px, $color-dark)
+      top 13px
+      left 0
+
+  &__socs
+    display flex
+    align-items center
+    margin-top 16px
+  &__soc
+    margin 0 16px
+    &_facebook
+      svg(facebook, 11px, $color-dark)
+      margin-left 2px
+      &:hover
+        svg-color(facebook, #4267B2)
+    &_vk
+      svg(vk, 29px, $color-dark)
+      &:hover
+        svg-color(vk, #2787F5)
+    &_instagram
+      svg(instagram, 26px, $color-dark)
+      &:hover
+        svg-color(instagram, #E1306C)
+
+  &_contacts
+    width 335px
+
++do(1100)
+  .footer
+    &__copyright
+      margin-right 65px
+    &__rights
+      margin-right 65px
+    &__policy
+      margin-left auto
+
++do(900)
+  .footer
+    &__copyright
+      margin-right 40px
+    &__rights
+      margin-right 40px
+
+  .footer-item__link, .footer-item__place
+    font-size 14px
+
++do(850)
+  .footer__top .footer-item__socs
+    display none
+  .footer__bottom
+    display none
+  .footer__bottom_mobile
+    display block
+  .footer-item__socs, .footer__copyright
+    margin 0
+  .footer__policy
+    width 140px
+    margin 24px 0
+  .footer__payments
+    margin-bottom 15px
+  .footer__rights
+    text-align right
+    margin 0
+  .footer-item_contacts
+    width 100%
+    order -1
+    margin-bottom 45px
++do(570)
+  .footer-item_M-hidden
+    display none

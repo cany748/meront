@@ -1,0 +1,8 @@
+/**
+ * Возвращяет процентное отношение [val] к [width]
+ * @param {{number|unit}} val
+ * @param {{number|unit}} width
+ */
+percent(val, from = $page-width) {
+   return unit(val*100/from, '%')
+}

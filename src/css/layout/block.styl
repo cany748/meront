@@ -1,0 +1,20 @@
+$block-wrapper,
+.block-wrapper {
+   padding-left $block-padding
+   padding-right $block-padding   
+   margin-left auto
+   margin-right auto
+   if ($block-max-width) {
+      min-width $block-width
+      max-width $block-max-width
+   } else {
+      width $block-width
+   }
+}
+
++do(850)
+   $block-wrapper,
+   .block-wrapper {
+      padding-left ($block-padding / 2)
+      padding-right ($block-padding / 2)
+   }

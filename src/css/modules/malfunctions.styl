@@ -1,0 +1,63 @@
+.malfunctions
+  &__title
+    color $color-dark
+    font-size 32px
+    font-weight 600
+    text-align center
+
+  &__items
+    display flex
+    flex-wrap wrap
+    justify-content center
+    margin-top 50px
+
+.malfunctions-item
+  size 160px 200px
+  box-sizing border-box
+  display flex
+  flex-direction column
+  color $color-dark
+  text-decoration none
+  background $color-white
+  border-radius 20px
+  border 4px solid $color-white
+  padding 18px 0 5px
+  margin 12.5px
+  &__img
+    size 92px
+    position relative
+    display flex
+    justify-content center
+    align-items center
+    border-radius 50%
+    background linear-gradient(90deg, #C9D6FF 0%, #E2E2E2 100%)
+    transition $transition-main
+    margin 0 auto
+    & img
+      display block
+      position relative
+      z-index 1
+    &:after
+      content ''
+      size 100%
+      position absolute
+      border-radius 50%
+      background linear-gradient(135deg, #FFA051 0%, #FF6628 100%)
+      transition $transition-main
+      opacity 0
+      z-index 0
+
+
+  &__text
+    font-size 16px
+    line-height 20px
+    text-align center
+    padding 0 12px
+    margin auto 0
+
+  &:hover
+    color $color-orange
+    border-color $color-orange
+    box-shadow 3px 3px 10px 3px #15151720
+    .malfunctions-item__img:after
+      opacity 1

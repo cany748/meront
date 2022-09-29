@@ -1,0 +1,671 @@
+.catalog
+  padding 100px 0
+  &__title
+    color $color-dark
+    font-size 32px
+    font-weight 600
+
+  &__relevance
+    position relative
+    color $color-green
+    font-size 14px
+    padding-left 20px
+    &:before
+      content ''
+      display block
+      position absolute
+      svg(check, 12px, $color-green)
+      top 5px
+      left 0
+
+  &__tabs
+    display flex
+    margin-top 40px
+
+  &__tab
+    size 220px 50px
+    color #808191
+    font-size 14px
+    font-weight 500
+    background #EAEAEA
+    border-radius 20px
+    border 2px solid #EAEAEA
+    margin-right 20px
+    &:last-child
+      margin-right 0
+    &:nth-child(4):after
+      content "-5%"
+      size 38px 20px
+      display block
+      position absolute
+      border-radius 26px
+      border 1px solid #DE3618
+      color #DE3618
+      font-size 12px
+      line-height 20px
+      background #E9D8D5
+      top -8px
+      right -6px
+    &.is-active
+      color $color-green
+      background $color-white
+      border-color $color-green
+    &:hover
+      color $color-white
+      background $color-green
+      border-color $color-green
+
+  &__panel:not(.is-active)
+    display none
+
+  &__separator
+    size 100% 2px
+    background-color #B7B8C1
+    margin 15px 0
+
+  &__section
+    display flex
+
+.catalog-item
+  width 828px
+  box-sizing border-box
+  display flex
+  align-items center
+  background lighten($color-gray, 25%)
+  border-radius 12px
+  transition $transition-main
+  padding 20px
+  margin 10px 0
+  &.is-active
+    background $color-white
+    box-shadow 3px 3px 10px 3px #15151710
+  &:hover
+    box-shadow 3px 3px 10px 3px #15151710
+
+.catalog-item_static
+  height 88px
+  & .catalog-item__price
+    margin-left auto
+
+.catalog-item__static-text
+  position relative
+  color #808191
+  font-weight 500
+  padding-left 30px
+  margin-left 40px
+  &:before
+    content ''
+    display block
+    position absolute
+    top 2px
+    left 0
+  &_diagnostics:before
+    svg(thunder-move, 22px)
+  &_full-construction:before
+    svg(tools, 18px)
+
+
+.catalog-item__checkbox
+  font-size 0
+  input
+    size 20px
+    appearance none
+    cursor pointer
+    background-size 10px 8px
+    background-repeat no-repeat
+    background-position center
+    border-radius 4px
+    border 2px solid #c1c1c1
+    transition $transition-main
+    &:checked
+      svg-color(check, $color-white)
+      background-color $color-green
+      border-color $color-green
+    &:hover
+      border-color $color-green
+    &:disabled
+      cursor not-allowed
+
+.catalog-item
+  &__text
+    width 400px
+    margin-left 35px
+  &__name
+    color $color-dark
+    font-weight 700
+  &__description
+    color #808191
+    font-size 15px
+    font-weight 500
+  &__extra
+    position relative
+    color $color-orange
+    font-size 13px
+    padding-left 20px
+    &:before
+      content ''
+      display block
+      position absolute
+      svg(gift, 14px)
+      top 1px
+      left 0
+
+.catalog-question
+  size 20px
+  display inline-block
+  position relative
+  svg-color(question)
+  background-color #ffffffcc
+  background-size 10px 12px
+  background-repeat no-repeat
+  background-position center
+  border-radius 50%
+  transition $transition-main
+
+  margin-bottom -4px
+  margin-left 8px
+  &:hover
+    background-color #EECBB3
+    .catalog-question__pop-up
+      visibility visible
+      opacity 1
+  &__pop-up
+    width 200px
+    visibility hidden
+    position absolute
+    color #808191
+    font-size 13px
+    font-weight 400
+    background $color-white
+    border-radius 20px
+    border 1px solid #E4E4E4
+    box-shadow 2px 2px 7px 1px #15151710
+    transition $transition-main
+    opacity 0
+    z-index 1
+    padding 20px
+    top 14px
+    left 14px
+
+.catalog-item
+  &__warranty, &__time
+    width 70px
+    font-weight 500
+    &-text
+      color #808191
+      font-size 15px
+    &-number
+      color $color-green
+  &__warranty
+    margin-left auto
+  &__time
+    margin-left 30px
+
+.catalog-item
+  &__price
+    width 85px
+    color $color-dark
+    font-weight 600
+    text-align right
+    margin-left 20px
+    &-old
+      color #808191
+      font-size 14px
+      font-weight 300
+      text-decoration line-through
+    &-current
+      color $color-orange
+    &_empty
+      position relative
+      color #808191
+      font-size 14px
+      font-weight 400
+      text-decoration none
+      &:before
+        content ''
+        display block
+        position absolute
+        svg(tel, 15px, #808191)
+        transition $transition-main
+        top 3px
+        left -15px
+      &:hover
+        &:before
+          svg-color(tel, $color-green)
+
+
+.catalog__sub
+  margin-left 15px
+
+.catalog-selected
+  box-sizing border-box
+  background $color-white
+  border-radius 15px
+  padding 25px 10px
+  margin 10px 0
+  &:not(.is-active)
+    display none
+  &__title
+    color $color-dark
+    font-weight 600
+    text-align center
+    padding-bottom 10px
+
+.catalog-selected-item
+  display flex
+  align-items center
+  border-radius 16px
+  border 1px solid #E4E4E4
+  padding 18px 20px
+  margin 10px 0
+  &__name
+    color $color-dark
+    font-size 14px
+    line-height 18px
+    font-weight 600
+    padding-right 15px
+  &__button
+    size 20px
+    flex-shrink 0
+    svg-color(cross, $color-dark)
+    background-color #E4E4E4
+    background-size 40%
+    background-repeat no-repeat
+    background-position center
+    border-radius 50%
+    margin-left auto
+  &__warranty, &__time
+    width 70px
+    flex-shrink 0
+    display none
+    font-weight 500
+    &-text
+      color #808191
+      font-size 15px
+    &-number
+      color $color-green
+  &__warranty
+    margin-left auto
+  &__time
+    margin-left 30px
+
+.catalog-selected-info
+  padding 0 15px
+  &__additional
+    display flex
+    cursor pointer
+    padding 18px 0
+    &-checkbox
+      font-size 0
+      input
+        //TODO вынести стили в form.styl checkbox
+        size 20px
+        appearance none
+        cursor pointer
+        background-size 10px 8px
+        background-repeat no-repeat
+        background-position center
+        border-radius 4px
+        border 2px solid #c1c1c1
+        transition $transition-main
+        &:checked
+          svg-color(check, $color-white)
+          background-color $color-orange
+          border-color $color-orange
+        &:hover
+          border-color $color-orange
+
+    &-text
+      color #808191
+      font-size 14px
+      margin-left 12px
+    &-number
+      color #B3B3B3
+      font-size 14px
+      margin-left auto
+
+  &__warranty, &__time
+    display flex
+    font-weight 500
+    padding 5px 0
+    &-text
+      color #808191
+      font-size 15px
+    &-number
+      color $color-green
+      margin-left auto
+
+  &__price
+    display flex
+    align-items flex-end
+    position relative
+    padding-top 15px
+    margin-top 10px
+    &-text
+      color #808191
+      font-size 15px
+      font-weight 500
+    &-current
+      color $color-dark
+      font-size 22px
+      font-weight 600
+      margin-left auto
+    &-old
+      position absolute
+      color $color-orange
+      font-size 14px
+      font-weight 300
+      text-decoration line-through
+      top 0
+      right 0
+
+  &__button
+    size 180px 50px
+    display block
+    margin 35px auto 0
+    &_credit
+      display none
+      color $color-black
+      background #ffdd2d
+      &.is-active
+        display block
+      &:hover
+        color $color-black
+        background #fcc521
+      &:active
+        color $color-black
+        background #fab619
+
+.catalog-selected_fixed
+  position fixed
+  align-items center
+  box-shadow 3px 3px 10px 3px #15151720
+  z-index 40
+  &.is-hide
+    display none
+  .catalog-selected__title
+    width auto
+    padding 0
+    margin-right 15px
+  .catalog-selected-info__button
+    margin 0
+  .catalog-selected-info__price
+    align-items center
+    padding 0
+    margin 0 auto 0 0
+  .catalog-selected-info__price-old
+    position static
+    margin-right 8px
+
+.catalog-consultation
+  background $color-white
+  border-radius 15px
+  padding 35px 25px
+  margin 10px 0
+  &__title
+    color $color-dark
+    font-weight 700
+    text-align center
+  &__text
+    color #808191
+    text-align center
+    margin-top 20px
+    &_small
+      font-size 14px
+      font-weight 500
+  &__button
+    size 182px 50px
+    display flex
+    font-size 14px
+    margin 25px auto 0
+  &__links
+    display flex
+    justify-content center
+    margin-top 14px
+  &__link
+    size 48px
+    box-sizing border-box
+    display flex
+    justify-content center
+    align-items center
+    border 1px solid rgba(21, 21, 23, 0.3)
+    border-radius 50%
+    margin 0 6px
+    &:hover
+      background rgba(21, 21, 23, 0.15)
+      border none
+    &:before
+      content ''
+      display block
+    &_whatsapp:before
+      svg(whatsapp, 27px)
+    &_telegram:before
+      svg(telegram, 23px)
+    &_vk:before
+      svg(vk, 28px, #2B68D7)
+
+.catalog-banner-1
+  height 283px
+  box-sizing border-box
+  display flex
+  flex-direction column
+  justify-content flex-end
+  color $color-white
+  font-size 24px
+  line-height 32px
+  background linear-gradient(223.58deg, #86E1A0 12.52%, #4FBF67 75.73%)
+  border-radius 15px
+  padding 25px
+  margin 10px 0
+  span
+    font-size 54px
+    line-height 54px
+    font-weight 600
+
+.catalog-banner-2
+  height 114px
+  box-sizing border-box
+  position relative
+  font-size 15px
+  color $color-white
+  background linear-gradient(223.58deg, #86E1A0 12.52%, #4FBF67 75.73%)
+  border-radius 15px
+  padding 15px
+  margin 10px 0
+  span
+    font-size 35px
+    line-height 35px
+    font-weight 600
+    &:before
+      content ''
+      display inline-block
+      svg(lightning, 22px)
+      margin-right 8px
+  img
+    position absolute
+    right 8px
+    bottom 0
+
+.catalog-banner-3
+  height 114px
+  box-sizing border-box
+  position relative
+  color $color-white
+  background linear-gradient(135deg, #FFA051 0%, #FF6628 100%)
+  border-radius 15px
+  padding 20px
+  margin 10px 0
+  span
+    font-size 30px
+    line-height 30px
+    font-weight 600
+  img
+    position absolute
+    right 0
+    bottom 0
+
++do(1255)
+  .catalog-banner-3 .catalog-question__pop-up
+    top 25px
+    left -100px
+
++do(1155)
+  .catalog-item
+    width 790px
+
++do(1077, 1117)
+  .catalog-item
+    width 750px
+    padding 20px 15px
+    &__text
+      margin-left 15px
+    &__time
+    &__time
+      margin-left 20px
+
++do(1077)
+  .catalog__section
+    flex-wrap wrap
+  .catalog__main, .catalog-item, .catalog__sub, .catalog__selected
+    width 100%
+  .catalog__sub
+    margin-left 0
+  .catalog__consultation, .catalog-banner-1, .catalog-banner-2, .catalog-banner-3, .catalog-selected-info__time, .catalog-selected-info__warranty
+    display none
+  .catalog-selected
+    display flex
+    flex-wrap wrap
+    padding 28px 18px
+    &__title
+      width 100%
+      font-size 24px
+      text-align left
+    &__items
+      flex 1 1
+      margin-right 15px
+    &-item__warranty, &-item__time
+      display block
+    &-item__button
+      margin-left 30px
+    &-info
+      padding 0
+      &__additional
+        padding 10px 0
+      &__button
+        size 242px 56px
+        margin-top 20px
+    &_fixed
+      width calc(100% - 60px)
+      bottom 0
+      left 30px
+
++do(850)
+  .catalog-item
+    padding 20px 15px
+    &__text, &__time, &__price
+      margin-left 15px
+    &__static-text
+      margin-left 23px
+  .catalog-selected-item__time, .catalog-selected-item__button
+    margin-left 15px
+  .catalog-selected-item
+    padding 15px
+  .catalog-selected_fixed
+    width calc(100% - 30px)
+    left 15px
+
++do(750)
+  .catalog__tab
+    size 144px 44px
+    font-size 12px
+    font-weight 600
+    &:nth-child(4):after
+      content none
+  .catalog-item
+    flex-wrap wrap
+    &__text
+      width calc(100% - 35px)
+    &__static-text
+      font-size 14px
+    &__name
+      position relative
+      font-size 14px
+      padding-right 35px
+    &__description
+      font-size 12px
+    &__extra
+      font-size 10px
+      padding-top 2px
+      padding-left 15px
+      &:before
+        size 12px
+    &__warranty, &__time
+      margin-left 35px
+      &-text
+        font-size 12px
+      &-number
+        font-size 13px
+    &__price
+      font-size 14px
+      margin-left auto
+      &-old
+        font-size 12px
+  .catalog-item__name .catalog-question
+    position absolute
+    right 0
+    &__pop-up
+      right 14px
+      left initial
+
++do(700)
+  .catalog-item__static-text_diagnostics
+    width calc(100% - 73px)
+  .catalog-item__static-text_full-construction
+    margin-top 6px
+    margin-left 43px
+  .catalog-selected
+    padding 20px 12px
+    &__items
+      width 100%
+      margin-right 0
+    &-item
+      padding 10px
+      &__warranty, &__time
+        width 55px
+        &-text
+          font-size 12px
+        &-number
+          font-size 13px
+      &__time, &__button
+        margin-left 10px
+    &-info
+      width 100%
+
+  .catalog-selected_fixed
+    justify-content center
+    .catalog-selected-info__button
+      margin 15px 100px 0
+    .catalog-selected-info__price
+      margin 0
+
++do(500)
+  .catalog__tabs
+    overflow-x scroll
+    margin-right -15px
+    margin-left -15px
+  .catalog__tab
+    flex-shrink 0
+    margin-right 10px
+    &:first-child
+      margin-left 15px
+
+  .catalog-selected_fixed .catalog-selected-info__button
+      margin 15px 30px 0
+
++do(480)
+  .catalog-item_static
+    height auto
+    & .catalog-item__price
+      width 20px
+  .catalog-item__static-text_full-construction
+    width 150px

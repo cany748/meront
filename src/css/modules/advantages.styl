@@ -1,0 +1,179 @@
+.advantages
+  background-image url("/assets/images/pattern.png")
+  background-position left bottom 8px
+  background-repeat repeat-x
+  padding 90px 0
+  &__title
+    color $color-dark
+    font-size 32px
+    font-weight 700
+    text-align center
+  &__items
+    display flex
+    flex-wrap wrap
+    justify-content center
+    margin-top 62px
+
+.advantages-item
+  size 240px 220px
+  position relative
+  box-sizing border-box
+  border-radius 42px
+  background $color-white
+  padding 28px
+  margin 8px
+  &:after
+    content ''
+    size 92px 2px
+    display block
+    position absolute
+    background #E5E5E4
+    top 119px
+    left 28px
+
+  &__title
+    font-size 20px
+    line-height 22px
+    font-weight 700
+    margin-top 52px
+
+  &__text
+    color #90949a
+    font-size 12px
+    line-height 16px
+    margin-top 36px
+
+  &__img
+    position absolute
+    font-size 0
+
+  &_diagnostics
+    .advantages-item__img
+      top -14px
+      left 38px
+
+  &_timing
+    .advantages-item__img
+      top -15px
+      right 37px
+
+  &_quality
+    .advantages-item__img
+      top 12px
+      right 15px
+
+  &_available
+    .advantages-item__img
+      top -12px
+      right -6px
+
+  &_reputation
+    .advantages-item__img
+      top -2px
+      right 17px
+
+  &_pro
+    .advantages-item__img
+      top -3px
+      right 35px
+
+  &_warranty
+    .advantages-item__img
+      top -5px
+      right 29px
+
+  &_accessories
+    .advantages-item__img
+      right -3px
+      bottom 13px
+
+    .advantages-item__title
+      margin-top 28px
+
++do(1170)
+  .advantages-item
+    size 220px 200px
+    padding 20px
+    margin 7px
+  .advantages__items:after
+    content ''
+    display block
+    width 220px
+    margin 0 7px
+
++do(750)
+  .advantages
+    padding-top 30px
+    padding-bottom 50px
+    &__title
+      font-size 24px
+    &__items
+      margin-top 30px
+      &:after
+        width 158px
+
+  .advantages-item
+    size 158px 144px
+    &:after
+      width 66px
+      top 56px
+      left 20px
+    &__title
+      font-size 13px
+      line-height 14px
+      margin-top 16px
+    &__text
+      font-size 10px
+      line-height 14px
+      margin-top 18px
+
+    &_diagnostics
+      .advantages-item__img
+        width 42px
+        top -14px
+        left 23px
+
+    &_timing
+      .advantages-item__img
+        width 40px
+        top -15px
+        right 23px
+
+    &_quality
+      .advantages-item__img
+        width 60px
+        top 3px
+        right 12px
+
+    &_available
+      .advantages-item__img
+        width 51px
+        top -13px
+        right -8px
+
+    &_reputation
+      .advantages-item__img
+        width 37px
+        top -3px
+        right 15px
+
+    &_pro
+      .advantages-item__img
+        width 43px
+        top -11px
+        right 12px
+
+    &_warranty
+      .advantages-item__img
+        width 43px
+        top -4px
+        right 20px
+
+    &_accessories
+      .advantages-item__img
+        width 49px
+        right -2px
+        bottom 8px
+
+      .advantages-item__title
+        margin-top 2px

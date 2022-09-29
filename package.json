@@ -1,0 +1,22 @@
+{
+  "name": "meront.ru",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "microlook",
+  "license": "ISC",
+  "dependencies": {
+    "bower": "^1.8.12",
+    "custom-markup": "^2.0.0"
+  },
+  "build": {
+    "retina": true,
+    "production": true,
+    "destination": {
+      "external_path": "web/assets"
+    }
+  }
+}

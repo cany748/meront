@@ -1,0 +1,76 @@
+/**
+ * Добавляет изображение из спрайта
+ * @param {{string|ident}} name - 'folder:icon' где `folder` указывает на папку спрайтов, а `icon` на конкретную иконку.
+ * @param {{string|list|ident}} align - Тип выравнивания блока
+ */
+sprite(name, align = null) {
+
+   $errors = {
+      name: '\n Имя спрайта должно быть строкой. \n\n'
+   }
+
+   if ( typeof(name) != 'string' ) {
+      error( $errors['name'] )
+   }
+
+   sprite = null
+   folder = 'main'
+   icon = null
+
+   if ( str-indexOf(':', name) != -1 ) {
+      _name = str-split(name, ':')
+      folder = _name[0]
+      icon = _name[1]
+      sprite = $sprites[folder][icon]
+   } else {
+      icon = name
+      sprite = $sprites[folder][icon]
+   }
+
+   if ( !sprite ) {
+      error( '\n В папке `sprites/'+ folder + '` отсутствует файл `'+ icon +'.png`. \n\n' )
+   } else {
+
+      url = '../sprites/'+ sprite.normal.image + '?' + $sprites-timestamp
+      width = convert(sprite.normal.px.width)
+      height = convert(sprite.normal.px.height)
+      offset_x = convert(sprite.normal.px.offset_x)
+      offset_y = convert(sprite.normal.px.offset_y)
+
+      width width
+      height height
+      background url( url ) offset_x offset_y no-repeat
+
+      if ( align ) {
+         horizontal = align[0]
+         vertical = align[1] ? align[1] : align[0]
+         position absolute if !@position
+         if horizontal is center {
+            margin-left round(width / -2)
+            left 50%
+         } else if (horizontal is left) {
+            left 0
+         } else if (horizontal is right) {
+            right 0
+         }
+
+         if (vertical is center) {
+            margin-top round(height / -2)
+            top 50%
+         } else if (vertical is top) {
+            top 0
+         } else if (vertical is bottom) {
+            bottom 0
+         }
+      }
+
+      retina_url = '../sprites/' + sprite.retina.image + '?' + $sprites-timestamp
+      retina_width = convert(sprite.normal.px.total_width)
+      retina_height = convert(sprite.normal.px.total_height)
+
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+         background-image url(retina_url)
+         background-size retina_width retina_height
+      }
+   }
+}

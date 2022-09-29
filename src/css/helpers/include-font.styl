@@ -1,0 +1,9 @@
+include-font(font-name, file-name, font-weight = normal, font-style = normal) {
+   @font-face {
+      font-family font-name
+      src url('/assets/fonts/'+file-name+'.woff2') format("woff2"), url('/assets/fonts/'+file-name+'.woff') format('woff')
+      font-display swap
+      font-weight font-weight
+      font-style font-style
+   }
+}

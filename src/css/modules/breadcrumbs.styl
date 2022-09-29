@@ -1,0 +1,35 @@
+.breadcrumbs
+  margin 15px 0
+  &__list
+    display flex
+    flex-wrap wrap
+  &__item
+    position relative
+    font-size 16px
+    padding-left 0
+    padding-right 30px
+    a
+      color #676767
+      text-decoration none
+      &:hover
+        color $color-green
+    &:after
+      content ''
+      display block
+      position absolute
+      svg(arrow-right, 11px, #676767)
+      top 9px
+      right 10px
+    &:last-of-type:after
+      content none
+
++do(1050)
+  .breadcrumbs
+    margin 0
+
++do(850)
+  .breadcrumbs
+    &__item
+      font-size 14px
+      &:after
+        top 7px

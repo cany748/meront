@@ -1,0 +1,125 @@
+.selectize
+  position relative
+  &__button
+    size 16px 17px
+    display block
+    position absolute
+    svg-color(search, #cacaca)
+    background-size 16px 17px
+    background-position center
+    background-repeat no-repeat
+    border none
+    outline none
+    pointer-events none
+    transition $transition-fast
+    padding 5px
+    top 20px
+    right 23px
+    &_active
+      size 15px
+      svg-color(cross, #cacaca)
+      background-size 15px
+      pointer-events initial
+
+.selectize-input
+  width 100%
+  position relative
+  cursor pointer
+  color $color-dark
+  font-size 18px
+  line-height $line-main
+  background $color-white
+  overflow hidden
+  box-sizing border-box
+  border 2px solid #e8e8e8
+  border-radius 20px
+  box-shadow 0 0 50px rgba(103, 103, 103, 0.05)
+  transition $transition-main
+  padding 18px 30px 19px
+  &.focus
+    border-color $color-orange
+
+  & input
+    width 500px
+    cursor pointer
+    border none
+    outline none
+    box-shadow none
+    appearance none
+    padding 0
+    margin 0
+    +placeholder() {
+      color $color-dark
+    }
+
+  &.input-active
+    cursor text
+    & input
+      cursor text
+
+  &.full
+    border-color $color-orange
+    & input
+      color transparent
+
+.selectize-dropdown
+  width 100%
+  max-height 320px
+  position absolute
+  cursor pointer
+  color $color-dark
+  font-size 16px
+  line-height $line-main
+  background $color-white
+  box-sizing border-box
+  //overflow hidden
+  border 2px solid #E8E8E8
+  border-radius 20px
+  box-shadow 0 0 50px rgba(103, 103, 103, 0.05)
+  z-index 10
+  margin-top 5px
+  & .optgroup-header
+    cursor default
+    padding 10px 0 10px 30px
+
+  & .option
+    cursor pointer
+    padding 10px 0 10px 60px
+    &.active
+      background #ffd2b3
+
+    & .highlight
+      font-weight 600
+
+//.selectize-control {
+//  position: relative
+//}
+
+.selectize-input > * {
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1
+}
+
+.simplebar-mask {
+  border-radius 19px
+}
+
+.simplebar-track.simplebar-vertical {
+  size 7px 90%
+  background #c4c4c41a
+  border-radius 50px
+  top 5%
+  right 3px
+}
+
+.simplebar-scrollbar {
+  width 3px
+  background #e8e8e8
+  border-radius 50px
+  left 2px
+}
+
++do(600)
+  .selectize-input input
+    font-size 16px

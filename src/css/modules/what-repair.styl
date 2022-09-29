@@ -1,0 +1,140 @@
+.what-repair
+  background $color-white
+  padding-top 190px
+  padding-bottom 90px
+  &__wrapper
+    position relative
+
+  &__title
+    color $color-dark
+    font-size 48px
+    font-weight 700
+    line-height 50px
+
+  &__links
+    size 608px 266px
+    display flex
+    flex-wrap wrap
+    flex-direction column
+    margin-top 100px
+
+  &__link
+    width fit-content
+    position relative
+    color $color-dark
+    font-size 22px
+    text-decoration none
+    padding 10px 10px 10px 47px
+    &:before
+      content ''
+      size 32px
+      display block
+      position absolute
+      border-radius 50%
+      svg-color(check, $color-white)
+      background-color #00b440
+      background-repeat no-repeat
+      background-position center
+      top 12px
+      left 0
+
+    &:hover
+      text-decoration underline
+
+  &__background
+    size 698px 668px
+    position absolute
+    background url("/assets/images/what-repair-pc.png")
+    background-size 100%
+    pointer-events none
+    user-select none
+    top -107px
+    left 507px
+
+  &__logos
+    display flex
+    justify-content space-between
+    align-items center
+    font-size 0
+    padding 0 15px
+    margin-top 230px
+
+  &__logo
+    display flex
+    justify-content center
+    align-items center
+    margin-right 30px
+    &:last-child
+      margin-right 0
+
++do(1170)
+  .what-repair
+    padding-top 130px
+    padding-bottom 55px
+    &__title
+      font-size 43px
+      line-height 45px
+
+    &__links
+      margin-top 70px
+
+    &__background
+      top -100px
+      left 500px
+
+    &__logos
+      padding 0
+      margin-top 190px
+
++do(850)
+  .what-repair
+    padding-top 100px
+    &__title
+      font-size 32px
+      line-height 36px
+
+    &__links
+      width 550px
+
+    &__link
+      font-size 18px
+      &:before
+        top 6px
+
+    &__background
+      size 500px 478px
+      top -60px
+      left 400px
+
+    &__logos
+      margin-top 60px
+
++do(600)
+  .what-repair
+    padding-top 40px
+    &__title
+      font-size 28px
+      line-height 32px
+
+    &__links
+      height auto
+      margin-top 35px
+
+    &__background
+      size 171px 542px
+      background url("/assets/images/what-repair-mobile.png")
+      top -20px
+      right 0
+      left auto
+
+    &__logos
+      flex-wrap wrap
+      margin-top 40px
+
+    &__logo
+      size 26% 35px
+      margin 10px 0
+
++do(390)
+  .what-repair__background
+    right -15px

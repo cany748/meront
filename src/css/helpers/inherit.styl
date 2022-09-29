@@ -1,0 +1,6 @@
+inherit(){
+   $selector = str-replace(selector(), '_[\w-]+(_[\w-]+)?', '')
+   {$selector} {
+      {block}
+   }
+}

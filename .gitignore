@@ -1,0 +1,10 @@
+/.idea/
+/*.sublime-project
+/*.sublime-workspace
+/*.editorconfig
+thumbs.db
+
+/node_modules/
+/bower_components/
+/web/
+/var/

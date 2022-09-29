@@ -1,0 +1,154 @@
+<div js-layer data-overlayer="true" class="layer layer-menu is-aside" data-id="mobile/menu">
+    <div class="layer-menu-header">
+        <div class="layer-menu-header__row">
+            <a href="/" class="layer-menu-header__logo"><img src="images/logo.svg" alt=""></a>
+            <a href="#" class="layer-menu-header__close" role="button" js-close-layer></a>
+        </div>
+        <a href="tel:88432070155" class="layer-menu-header__tel">8 (843) 207-01-55</a>
+    </div>
+    <div class="layer__content">
+        <div class="layer-menu__navs">
+            <a href="/">Главная</a>
+            <a href="/iphone">Ремонт iPhone</a>
+            <a href="/ipad">Ремонт iPad</a>
+            <a href="/smartphones">Ремонт телефонов</a>
+            <a href="/contacts">Контакты</a>
+        </div>
+        <div class="layer-menu__line"></div>
+        <div class="layer-menu-place">
+            <div class="layer-menu-place__address">Спартаковская, 6</div>
+            <div class="layer-menu-place__info">1 этаж, вход со стороны “Перекрестка”</div>
+        </div>
+        <div class="layer-menu-place">
+            <div class="layer-menu-place__address">Спартаковская, 6</div>
+            <div class="layer-menu-place__info">1 этаж, вход со стороны “Перекрестка”</div>
+        </div>
+        <div class="layer-menu__time">
+            Мы работаем <span style="color: #ff6a00;">ежедневно</span><br>
+            с &nbsp;<span style="font-size: 16px;">10</span>&nbsp; до &nbsp;<span style="font-size: 16px;">22</span>
+        </div>
+        <div class="layer-menu-socials">
+            <a href="#" class="layer-menu-socials__item layer-menu-socials__item_whatsapp"></a>
+            <a href="#" class="layer-menu-socials__item layer-menu-socials__item_telegram"></a>
+            <a href="#" class="layer-menu-socials__item layer-menu-socials__item_vk"></a>
+            <a href="#" class="layer-menu-socials__item layer-menu-socials__item_phone"></a>
+        </div>
+        <button class="layer-menu__button button">Оставить заявку</button>
+    </div>
+</div>
+<div js-layer data-overlayer="true" class="layer layer_overlay callback" data-id="main/callback">
+    <div class="layer__inside">
+        <a href="#" class="layer-close"></a>
+        <div class="callback__title">Мы свяжемся с Вами</div>
+        <form js-callback-form>
+            <div class="callback__field-title">Ваше имя</div>
+            <label class="field callback__field callback__field_icon callback__field_icon-user">
+                <input placeholder="Введите свое имя" type="text" name="name" class="field__input">
+            </label>
+            <div class="callback__field-title">Ваш номер телефона</div>
+            <label class="field callback__field callback__field_icon callback__field_icon-phone">
+                <input placeholder="+7 (___) ___-__-__" type="tel" name="tel" class="field__input" required>
+                <span class="field__error">Поле обязательно для заполнения!</span>
+            </label>
+            <button type="submit" class="button callback__button">Отправить</button>
+        </form>
+    </div>
+</div>
+<div js-layer data-overlayer="true" class="layer layer_overlay callback" data-id="main/callback-out">
+    <div class="layer__inside">
+        <a href="#" class="layer-close"></a>
+        <div class="callback__title">Мы свяжемся с Вами</div>
+        <div class="callback__vip">VIP услуга</div>
+        <form js-callback-form class="callback__form">
+            <div class="callback__field-title">Ваше имя</div>
+            <label class="field callback__field callback__field_icon callback__field_icon-user">
+                <input placeholder="Введите свое имя" type="text" name="name" class="field__input " value="">
+            </label>
+            <div class="callback__field-title">Ваш номер телефона</div>
+            <label class="field callback__field callback__field_icon callback__field_icon-phone">
+                <input placeholder="+7 (___) ___ - ____" type="tel" name="tel" class="field__input" value="">
+            </label>
+            <div class="callback__field-title">Адрес в г. Казань</div>
+            <label js-district class="field callback__field callback__field_selectize selectize">
+                <select placeholder="Район" name="district">
+                    <option value=""></option>
+                    <option value="1;490;Вахитовский">Вахитовский</option>
+                    <option value="2;490;Советский">Советский</option>
+                    <option value="3;590;Приволжский">Приволжский</option>
+                    <option value="4;490;Московский">Московский</option>
+                    <option value="5;590;Кировский">Кировский</option>
+                    <option value="6;490;Ново-Савиновский">Ново-Савиновский</option>
+                    <option value="7;590;Авиастроительный">Авиастроительный</option>
+                </select>
+                <button class="selectize__button" type="button"></button>
+            </label>
+            <label class="field callback__field">
+                <input placeholder="Улица" type="text" name="street" class="field__input">
+            </label>
+            <div class="callback__fields">
+                <label class="field callback__field callback__field_small">
+                    <input placeholder="д." type="text" name="apartment" class="field__input">
+                </label>
+                <label class="field callback__field callback__field_small">
+                    <input placeholder="кв." type="text" name="flat" class="field__input">
+                </label>
+            </div>
+            <textarea name="comment" placeholder="Напишите свою неисправность" class="callback__textarea"></textarea>
+            <div class="callback__price">Стоимость выезда <span>от 190₽</span></div>
+            <input type="hidden" name="price">
+            <input type="hidden" name="vip" value="true">
+            <input type="text" name="checkspaaam" style="display: none; position: absolute; left: -999999px; top: -999999px;">
+            <button type="submit" class="button callback__button">Отправить</button>
+        </form>
+    </div>
+</div>
+<div js-layer data-overlayer="true" class="layer layer_overlay layer-address" data-id="main/address-1">
+    <div class="layer__inside">
+        <a href="#" class="layer-close"></a>
+        <div class="contacts-item contacts-item_popup">
+            <div class="contacts__info">
+                <div class="contacts-item__title">TЦ “Сувар Плаза”</div>
+                <div class="contacts-item-place">
+                    <div class="contacts-item-place__address">Спартаковская, 6</div>
+                    <div class="contacts-item-place__info">1 этаж, вход со стороны “Перекрестка”</div>
+                </div>
+                <div class="contacts-item__time">
+                    Мы работаем <span style="color: #ff6a00;">ежедневно</span><br>
+                    с &nbsp;<span style="font-size: 16px;">10</span>&nbsp; до &nbsp;<span style="font-size: 16px;">22</span>
+                </div>
+                <a href="tel:88432070155" class="contacts-item__tel">8 (843) 207-01-55</a>
+                <div class="contacts-item-routes">
+                    <div class="contacts-item-routes__text">Построить маршрут:</div>
+                    <div class="contacts-item-routes__items">
+                        <a href="https://2gis.ru/kazan/directions/points/%7C49.15092%2C55.793265%3B2956015537022403" class="contacts-item-routes__item">
+                            <img src="/images/2GIS.png" alt="">
+                            <span>2GIS</span>
+                        </a>
+                        <a href="https://yandex.ru/maps/43/kazan/?ll=49.154153%2C55.785069&mode=routes&rtext=~55.793576%2C49.150431&rtt=auto&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D58959279608&z=13" class="contacts-item-routes__item">
+                            <img src="/images/YAmaps.png" alt="">
+                            <span>Я.Навигатор</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contacts-item-transports">
+                    <div class="contacts-item-transports__item contacts-item-transports__item_bus">Автобусы<br><span>31, 37, 47</span></div>
+                    <div class="contacts-item-transports__item contacts-item-transports__item_trolleybus">Троллейбусы<br><span>6, 8, 12</span></div>
+                    <div class="contacts-item-transports__item contacts-item-transports__item_car">Парковка<br><span>1 час бесплатно, далее 50 ₽/час</span></div>
+                </div>
+            </div>
+            <div class="contacts-item__view">
+                <div class="contacts-item__images">
+                    <div class="contacts-item-images">
+                        <div class="contacts-item-images__big-pic"><img src="/images/contacts-images-big.jpg" alt=""></div>
+                        <div class="contacts-item-images__list">
+                            <div class="contacts-item-images__item"><img src="/images/contacts-images.png" alt=""></div>
+                            <div class="contacts-item-images__item"><img src="/images/contacts-images2.png" alt=""></div>
+                            <div class="contacts-item-images__item"><img src="/images/contacts-images.png" alt=""></div>
+                            <div class="contacts-item-images__item"><img src="/images/contacts-images2.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

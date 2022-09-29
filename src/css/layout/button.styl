@@ -1,0 +1,94 @@
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+   -webkit-box-sizing content-box
+   -moz-box-sizing content-box
+   box-sizing content-box
+}
+
+/* Reset `button` and button-style `input` default styles */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+   background none
+   border 0
+   color inherit
+   font inherit
+   line-height normal
+   overflow visible
+   padding 0
+   -webkit-appearance button /* for input */
+   -webkit-user-select none /* for button */
+   -moz-user-select none
+   -ms-user-select none
+}
+
+
+.button::-moz-focus-inner {
+   padding 0
+   border 0
+}
+
+.button {
+   position relative
+   display inline-flex
+   justify-content center
+   align-items center
+   box-sizing border-box
+   cursor pointer
+   user-select none
+   transition $transition-main
+
+   vertical-align top
+
+   border-radius 15px
+   border none
+   outline none
+   background-color $color-green
+
+   color $color-white
+   font-weight 600
+   font-size $size-main
+   letter-spacing 0.5px
+
+   text-align center
+   text-transform none
+   text-decoration none
+   //TODO добавить стили для disabled
+
+   &:hover, &:active {
+      color $color-white
+      background-color lighten($color-green, 10%)
+   }
+
+
+   &_orange {
+      background-color $color-orange
+      &:hover, &:active {
+         background-color lighten($color-orange, 25%)
+      }
+   }
+
+   &_nobg {
+      color $color-dark
+      background transparent
+      border 2px solid $color-green
+      &:hover {
+         background $color-green
+      }
+      &.button_orange {
+         border-color $color-orange
+         &:hover {
+            background $color-orange
+         }
+      }
+   }
+}
+
+
+.button_full {
+   width 100%
+}

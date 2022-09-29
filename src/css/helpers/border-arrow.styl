@@ -1,0 +1,33 @@
+/**
+ * Строит элемент-стрелку путём задания бордеров.
+ * Порядок передаваемых значений: width height color direction.
+ * @param {unit} width - размер по горизонтали
+ * @param {unit} height - размер по вертикали
+ * @param {color} color - цвет
+ * @param {string} direction - направление
+ */
+border-arrow() {
+   arg = arguments
+   w = arg[0]
+   h = arg[1]
+   c = arg[2]
+   d = arg[3]
+   width 0
+   height 0
+   border-width 0
+   border-style solid
+   border-color transparent
+   if (d == top) {
+      border-width 0 (w/2) h
+      border-bottom-color c
+   } else if (d == right) {
+      border-width (h/2) 0 (h/2) w
+      border-left-color c
+   } else if (d == bottom) {
+      border-width h (w/2) 0
+      border-top-color c
+   } else if (d == left) {
+      border-width (h/2) w (h/2) 0
+      border-right-color c
+   }
+}

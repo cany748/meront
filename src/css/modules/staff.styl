@@ -1,0 +1,86 @@
+.staff
+  padding 60px 0
+  &__title
+    color $color-dark
+    font-size 32px
+    font-weight 600
+    text-align center
+  &__items
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+    margin 80px -10px 0
+    &:after
+      content ''
+      display block
+      width 235px
+      margin 0 10px
+
+
+.staff-item
+  width 235px
+  margin 0 10px 50px
+  &__img
+    size 235px 260px
+    overflow hidden
+    font-size 0
+    border-radius 25px
+  &__name
+    color $color-dark
+    font-size 24px
+    font-weight 600
+    margin-top 20px
+  &__position
+    color $color-green
+
++do(1080)
+  .staff__items:after
+    width 190px
+  .staff-item
+    width 190px
+    &__img
+      size 190px 209px
+
++do(650)
+  .staff__items
+    margin-top 40px
+    &:after
+      width 150px
+  .staff-item
+    width 150px
+    margin-bottom 35px
+    &__img
+      size 150px 166px
+    &__name
+      font-size 18px
+    &__position
+      font-size 14px
+
++do(530)
+  .staff__title
+    font-size 24px
+    text-align left
+  .staff__items:after
+    width 120px
+  .staff-item
+    width 120px
+    margin-bottom 25px
+    &__img
+      size 120px 133px
+    &__name
+      font-size 16px
+      margin-top 10px
+    &__position
+      font-size 12px
+
++do(430)
+  .staff__items:after
+    width 100px
+  .staff-item
+    width 100px
+    &__img
+      size 100px 111px
+    &__name
+      font-size 14px
+    &__position
+      font-size 10px

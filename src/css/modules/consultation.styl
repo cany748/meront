@@ -1,0 +1,144 @@
+.consultation
+  z-index 1
+  &__wrapper
+    width 1110px
+    box-sizing border-box
+    position relative
+    background $color-white
+    border solid 2px #e8e8e8
+    border-radius 30px
+    box-shadow 0 20px 50px 0 #6767670c
+    padding 0 50px
+    z-index 1
+
+  &__title
+    color $color-dark
+    font-size 24px
+    font-weight 600
+
+  &__body
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+    align-items center
+    padding 30px 0
+
+  &__links
+    display flex
+
+  &__link
+    size 60px
+    box-sizing border-box
+    display flex
+    justify-content center
+    align-items center
+    border 1px solid rgba(21, 21, 23, 0.3)
+    border-radius 50%
+    margin 0 8px
+    &:hover
+      background rgba(21, 21, 23, 0.15)
+      border none
+    &:before
+      content ''
+      display block
+    &_whatsapp:before
+      svg(whatsapp, 34px)
+    &_telegram:before
+      svg(telegram, 29px)
+    &_vk:before
+      svg(vk, 34px, #2B68D7)
+    &_phone:before
+      svg(tel, 24px, $color-green)
+
+  &__buttons
+    display flex
+    margin-left auto
+    align-items center
+
+  &__or
+    color $color-dark
+    font-size 18px
+    margin 0 20px
+
+  &__button
+    size 216px 60px
+
+  &_white
+    background $color-white
+
+  &_layers
+    background linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(238,239,242,1) 50%, rgba(238,239,242,1) 100%)
+
+.consultation_big .consultation__title
+  font-size 32px
+  text-align center
+  padding-top 22px
+
++do(1110)
+  .consultation
+    padding 0 15px
+    &__wrapper
+      width 100%
+      padding 0 30px
+
+    &__body
+      padding 25px 0
+
+    &__title
+      font-size 19px
+
+    &__link
+      margin 0 6px
+
+    &__or
+      font-size 15px
+      margin 0 16px
+
+    &__button
+      size 185px 52px
+      font-size 15px
+
+  .consultation_big .consultation__title
+    font-size 26px
+    padding-top 20px
+
++do(900)
+  .consultation_small .consultation__button
+    display none
+
++do(850)
+  .consultation
+    &__wrapper
+      padding 0 25px
+
+    &__title
+      font-size 16px
+
+    &__buttons
+      width 100%
+      justify-content center
+      margin-top 30px
+
+  .consultation_big
+    & .consultation__title
+      font-size 22px
+
+    & .consultation__links
+      margin auto
+
++do(650)
+  .consultation_small
+    & .consultation__title
+      padding-bottom 24px
+
+    & .consultation__links
+      width 100%
+      justify-content center
+
++do(520)
+  .consultation__buttons
+    flex-direction column
+    padding-bottom 10px
+
+  .consultation__or
+    margin 10px 0

@@ -1,0 +1,10 @@
+adaptive-bg($name) {
+   $size = image-size($name)
+   width $size[0]
+   background url($name) 0 0 / cover no-repeat
+   &:before {
+      content ''
+      display block
+      padding-bottom (($size[1]*100)/$size[0])%
+   }
+}

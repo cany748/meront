@@ -1,0 +1,78 @@
+.models
+  padding 100px 0
+  &__wrapper
+    display flex
+    flex-wrap wrap
+  &__title
+    width 100%
+    color $color-dark
+    font-size 32px
+    font-weight 600
+    text-align center
+    margin-bottom 90px
+  &__img
+    size 300px 400px
+    box-sizing border-box
+    display flex
+    justify-content center
+    align-items center
+    overflow hidden
+    background linear-gradient(90deg, #C9D6FF 0%, #E2E2E2 100%), #FFEDDC
+    border-radius 24px
+    & img
+      max-height none
+  &__name
+    color $color-dark
+    font-size 30px
+    font-weight 600
+    margin-top 15px
+  &__button
+    size 290px 50px
+    margin-top 30px
+  &__items
+    flex 1 1
+    columns 3
+    padding-left 50px
+  &__item
+    display block
+    color $color-dark
+    //font-size 18px
+    line-height 1.3
+    text-decoration none
+    padding 5px 0
+
++do(950)
+  .models
+    padding 50px 0
+    &__title
+      margin-bottom 25px
+    &__side
+      width 100%
+    &__img
+      size 240px 170px
+      align-items flex-start
+      border-radius 24px 24px 0 0
+      padding 30px 40px 0
+      margin 0  auto
+    &__name, &__button
+      display none
+    &__items
+      flex 0 0 100%
+      columns 4
+      padding 0
+      margin 75px auto 0
+
++do(800)
+  .models__items
+    flex 0 1 auto
+    columns 3
+
++do(600)
+  .models__title
+    font-size 24px
+  .models__items
+    columns 2
+
++do(480)
+  .models__item
+    font-size 14px

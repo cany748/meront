@@ -1,0 +1,179 @@
+.promotions
+  background $color-white
+  padding 100px 0
+  &__wrapper
+    position relative
+  &__decor
+    size 1322px 991px
+    position absolute
+    background #F7F7F8
+    background-image url("/assets/images/pattern.png")
+    background-position left bottom 8px
+    background-repeat repeat-x
+    border-radius 21px
+    top -168px
+    left -76px
+
+  &__title
+    position relative
+    color $color-dark
+    font-size 32px
+    font-weight 700
+    text-align center
+
+  &__buttons
+    display flex
+    position absolute
+    top 4px
+    right 40px
+
+  &__button
+    display block
+    size 40px
+    box-sizing border-box
+    border-radius 50%
+    margin 0 8px
+    &_left
+      svg-color(arrow-left, $color-dark)
+      background-repeat no-repeat
+      background-position center
+      border solid 1px #151517
+    &_right
+      background $color-green
+      svg-color(arrow-right, $color-white)
+      background-repeat no-repeat
+      background-position center
+
+  &__slider
+    margin-top 65px
+
+.promotions-item
+  size 320px 610px
+  border-radius 34px
+  background-color #ffeddc
+  margin 0 20px
+  &__img
+    size 300px 280px
+    display flex
+    justify-content center
+    align-items center
+    padding-top 10px
+    margin-left 10px
+
+  &__inner
+    size 300px
+    border-radius 24px
+    background $color-white
+    margin 10px
+
+  &__top-text
+    color #292930
+    font-size 14px
+    font-weight 500
+    line-height 14px
+    padding-top 40px
+    padding-left 30px
+
+  &__title
+    height 70px
+    display flex
+    align-items flex-end
+    overflow hidden
+    color #292930
+    font-size 24px
+    font-weight 700
+    line-height 26px
+    padding 10px 30px 0
+
+  &__text
+    height 90px
+    display flex
+    align-items center
+    overflow hidden
+    color #999fae
+    font-size 16px
+    line-height 22px
+    padding 10px 30px 0
+
+  &__link
+    display inline-block
+    position relative
+    color #27272e
+    font-size 18px
+    font-weight 500
+    line-height 20px
+    text-decoration none
+    padding-right 25px
+    padding-left 30px
+    margin-top 15px
+    &:hover
+      color $color-orange
+      &:after
+        svg-color(arrow, $color-orange)
+        right 0
+    &:after
+      content ''
+      display block
+      position absolute
+      svg(arrow, 6px, #27272e)
+      transition $transition-main
+      top 5px
+      right 5px
+
+  &_2
+    background-color #dcffe4
+  &_3
+    background-color #dbf8ff
+
++do(1110)
+  .promotions
+    padding 65px 0
+    &__wrapper
+      padding 0
+    &__slider
+      margin-top 45px
+    &__decor
+      height 740px
+      top -122px
+
+  .promotions-item
+    size 240px 460px
+    margin 0 15px
+    &__img
+      size 220px 200px
+    &__inner
+      size 220px 230px
+    &__title
+      height 50px
+      font-size 17px
+      line-height 20px
+    &__text
+      height 66px
+      align-items initial
+      font-size 12px
+      line-height 16px
+    &__link
+      font-size 13px
+      line-height 15px
+      margin-top 7px
+      &:after
+        size 4px 8px
+        top 4px
+
++do(650)
+  .promotions__decor
+    height 776px
+    top -158px
+  .promotions__title
+    text-align left
+    padding-left 25px
+
+  .promotions__buttons
+    right 25px
++do(450)
+  .promotions__buttons
+    top 10px
+
+  .promotions__button
+    size 30px
+    margin 0 5px

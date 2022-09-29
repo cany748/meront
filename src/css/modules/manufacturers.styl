@@ -1,0 +1,129 @@
+.manufacturers
+  padding 100px 0
+  &__title
+    color $color-dark
+    font-size 32px
+    line-height 44px
+    font-weight 600
+    text-align center
+
+  &__items
+    display flex
+    justify-content center
+    margin 55px auto 0
+    &_wrap
+      flex-wrap wrap
+
+.manufacturers-item
+  text-decoration none
+  &__img
+    display flex
+    justify-content center
+    align-items center
+    position relative
+    font-size 0
+    transition $transition-main
+    border-radius 24px
+    & img
+      position relative
+      z-index 1
+    &:after
+      content ''
+      size 100%
+      display block
+      position absolute
+      border-radius 24px
+      background linear-gradient(135deg, #FFA051 0%, #FF6628 100%)
+      transition $transition-main
+      opacity 0
+      z-index 0
+
+  &__text
+    font-weight 600
+    margin-top 20px
+
+  &:hover
+    color $color-orange
+    .manufacturers-item__img
+      box-shadow 3px 3px 10px 3px #15151710
+
+.manufacturers-item_big
+  margin 0 65px
+  .manufacturers-item__text
+    font-size 32px
+
+.manufacturers-item_small
+  margin 0 25px
+  .manufacturers-item__img
+    size 134px 184px
+    background linear-gradient(90deg, #C9D6FF 0%, #E2E2E2 100%)
+
+  &:hover .manufacturers-item__img:after
+    opacity 1
+
+  .manufacturers-item__text
+    font-size 20px
+
+.manufacturers-item_medium
+  margin 0 30px
+  .manufacturers-item__img
+    size 200px 272px
+    background linear-gradient(90deg, #C9D6FF 0%, #E2E2E2 100%)
+
+  &:hover .manufacturers-item__img:after
+    opacity 1
+
+  .manufacturers-item__text
+    font-size 20px
+
++do(1170)
+  .manufacturers-item_small, .manufacturers-item_medium
+    margin 0 15px 35px
+
++do(1070)
+  .manufacturers__title
+    font-size 26px
+    line-height 36px
+
+  .manufacturers-item_big
+    margin 0 50px
+    .manufacturers-item__img
+      width 300px
+    .manufacturers-item__text
+      font-size 26px
+
+  .manufacturers-item_medium .manufacturers-item__img
+    size 140px 200px
+
++do(750)
+  .manufacturers
+    padding 40px 0
+
+  .manufacturers-item_big
+    margin 0 20px
+    .manufacturers-item__img
+      width 240px
+    .manufacturers-item__text
+      font-size 16px
+
++do(550)
+  .manufacturers__title
+    font-size 18px
+    line-height 28px
+    font-weight 700
+    text-align left
+
+  .manufacturers__items
+    margin-top 35px
+
+  .manufacturers-item_big .manufacturers-item__img
+      width 200px
+
++do(460)
+  .manufacturers-item_big
+    margin 0 10px
+    .manufacturers-item__img
+      width 150px
+    .manufacturers-item__text
+      font-size 15px
+      font-weight 700

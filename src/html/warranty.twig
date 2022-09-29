@@ -1,0 +1,117 @@
+{% extends "common/base.twig" %}
+
+{% block body_mod %}{% endblock %}
+{% block body %}
+<div class="base block">
+    <div class="base__wrapper block-wrapper">
+        <div class="base__main">
+            <div class="breadcrumbs base__breadcrumbs">
+                <ul class="breadcrumbs__list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a href="#" itemprop="item"><span itemprop="name">Главная</span></a>
+                        <meta itemprop="position" content="1">
+                    </li>
+                    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a href="#" itemprop="item"><span itemprop="name">Сервис</span></a>
+                        <meta itemprop="position" content="2">
+                    </li>
+                </ul>
+            </div>
+            <h1 class="base__title">О компании</h1>
+            <div class="base__warranty">
+                Ремонт айфон и айпад в Казани наиболее освоен именно в нашем сервисном центре. Мы имеем огромный опыт работы по ремонту iPhone и iPad всех поколений
+                и гарантируем высочайшее качество наших услуг.
+            </div>
+            <div class="base__contacts">
+                <div class="base__contacts-title">Получи бесплатную консультацию</div>
+                <div class="base__contacts-items">
+                    <a href="" class="base__contacts-item base__contacts-item_whatsapp"></a>
+                    <a href="" class="base__contacts-item base__contacts-item_telegram"></a>
+                    <a href="" class="base__contacts-item base__contacts-item_vk"></a>
+                    <a href="tel:88432070155" class="base__contacts-item base__contacts-item_phone">8 (843) 207-01-55</a>
+                </div>
+            </div>
+        </div>
+        <div class="base__side">
+            <div class="base__side-decor {#base__side-decor_small#}">
+                <img src="/assets/images/base.svg" alt="">
+            </div>
+            <div class="base__side-img">
+                <img src="/assets/images/Illustration.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="warranty block">
+    <div class="warranty__wrapper block-wrapper">
+        <div class="warranty__title">Наша гарантия</div>
+        <div class="warranty__row">
+            <div class="warranty__img warranty__img_1"><img src="/assets/images/safe.png" alt=""></div>
+            <div class="warranty__text warranty__text_1">Время от времени гаджеты яблочного производители действительно испытывают проблемы с сетью. Чаще всего это случается, когда пользователь отключает режим полета. Если спустя несколько минут сеть не найдена, попробуйте перезагрузить телефон, а также вытащить и заново вставить SIM-карту. Следует насторожиться, если устройство постоянно теряет сеть, а ваши друзья и родные жалуются на то, что вам невозможно дозвониться. Явление это достаточно неприятное, ведь неработающий телефон превращается в бесполезную игрушку. В таком случае необходимым становится профессиональный ремонт iPhone.<br><br><br>Еще одна характерная проблема для яблочных гаджетов – невозможность подключения к действующим сетям Wi-Fi. Ремонт iPhone может потребоваться, если Интернет постоянно «отваливается», медленно грузится или постоянно переподключается при стабильно высоком уровне соединения.</div>
+        </div>
+        <div class="warranty-periods">
+            <div class="warranty__title">Гарантия на ремонт<br>и замененные детали</div>
+            <div class="warranty-periods__list">
+                <div class="warranty-periods-item warranty-periods-item_left">
+                    <div class="warranty-periods-item__img"><img src="/assets/images/model-ipad.png" alt=""></div>
+                    <div class="warranty-periods-item__logo"><img src="/assets/images/apple.png" alt=""></div>
+                    <div class="warranty-periods-item__name">iPad</div>
+                    <div class="warranty-periods-item__number">3 месяца</div>
+                </div>
+                <div class="warranty-periods-item warranty-periods-item_center">
+                    <div class="warranty-periods-item__img"><img src="/assets/images/model-iphone.png" alt=""></div>
+                    <div class="warranty-periods-item__logo"><img src="/assets/images/apple.png" alt=""></div>
+                    <div class="warranty-periods-item__name">iPhone</div>
+                    <div class="warranty-periods-item__number">6 месяцев</div>
+                </div>
+                <div class="warranty-periods-item warranty-periods-item_right">
+                    <div class="warranty-periods-item__img"><img src="/assets/images/model-samsung.png" alt=""></div>
+                    <div class="warranty-periods-item__logo"><img src="/assets/images/android.png" alt=""></div>
+                    <div class="warranty-periods-item__name">Android</div>
+                    <div class="warranty-periods-item__number">1 месяц</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="description block">
+    <div class="description__wrapper block-wrapper">
+        <div class="description__text">
+            <h3>Сервисный центр "iServiceGroup" оставляет за собой право отказать в проведении гарантийного ремонта в следующих случаях:</h3><br><br>
+            Наличие следов механического воздействия (сколы, трещины, царапины, разрывы шлейфа, повреждения платы и др.)<br>
+            Наличие следов попадания жидкости, либо присутствие жидкости в аппарате <br>
+            Попытка самостоятельного ремонта <br>
+            Использование устройства в условиях, не рекомендованных изготовителем (повышенная температура, влажность, высокий уровень ЭМИ, вибрации и др.)
+        </div>
+    </div>
+</div>
+<div class="warranty block">
+    <div class="warranty__wrapper block-wrapper">
+        <div class="warranty__title warranty__title_2">Возврат средств</div>
+        <div class="warranty__row">
+            <div class="warranty__text warranty__text_2">
+                Мы работаем для клиента. Это значит, что Вы, как клиент, всегда можете рассчитывать на соответствующее к себе отношение. Ремонт устройства сопряжен с определенными рисками, которые мы берем на себя, и если что-то пошло
+                не так, то наша компания будет стремиться урегулировать это
+                с максимальным комфортом для клиента. Одним из таких случаев может считаться "Возврат денег".
+            </div>
+            <div class="warranty__img warranty__img_2"><img src="/assets/images/card.png" alt=""></div>
+        </div>
+    </div>
+</div>
+<div class="description block">
+    <div class="description__wrapper block-wrapper">
+        <div class="description__text">
+            <h3>Когда “Возврат денег” может быть осуществлен:</h3><br><br>
+            Устройство возвращается в сервисный центр по гарантии в течении трех раз. Так может произойти с "утонувшими" телефонами, где детали начинают отказывать одна за другой. В остальных же случаях ремонта такое встречается крайне редко, так как мы тщательно проверяем все поступающие к нам детали.<br><br>Если Вами был обнаружен производственный брак после распаковки товара дома, то Вы можете вернуть такой товар. Однако принять его мы сможем только в течение 2 недель со дня покупки и только в случае наличия у Вас упаковочного материала и чека на товар. Мы всегда готовы выслушать и помочь в любых ситуациях.
+        </div>
+        <div class="description__links">
+            <div class="description__prompt">Поделиться</div>
+            <a href="" class="description__link description__link_facebook"></a>
+            <a href="" class="description__link description__link_twitter"></a>
+            <a href="" class="description__link description__link_vk"></a>
+            <a href="" class="description__link description__link_instagram"></a>
+            <a href="" class="description__link description__link_tiktok"></a>
+        </div>
+    </div>
+</div>
+{% endblock %}

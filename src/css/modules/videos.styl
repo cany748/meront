@@ -1,0 +1,108 @@
+.videos
+  padding 40px 0
+  &__title
+    display flex
+    align-items center
+    font-size 48px
+    font-weight 600
+    margin-bottom 50px
+    &:after
+      content ''
+      size 80px 99px
+      display block
+      background url("/assets/images/video-illustration.png")
+      background-size 100%
+      margin-left 45px
+  //&__list
+  //  display flex
+  //  justify-content space-between
+
+.videos-item
+  size 260px 180px
+  position relative
+  display flex
+  align-items flex-end
+  border-radius 25px
+  color $color-white
+  text-decoration none
+  //box-shadow 0 20px 50px #6767671a
+  background linear-gradient(180deg, #00000000 10%, #00000099 80%, #C4C4C4 140%)
+  transition $transition-main
+  overflow hidden
+  margin 0 9px
+  &:hover
+    color $color-orange
+    //box-shadow 0 20px 50px #15151730
+  img
+    position absolute
+    z-index -1
+    trbl 0
+  &__play-button
+    size 46px
+    position absolute
+    background url("/assets/images/video-play.png")
+    background-size 100%
+    margin-top -23px
+    margin-left -23px
+    top 50%
+    left 50%
+  &__name
+    position relative
+    font-size 16px
+    line-height 1.2
+    font-weight 600
+    padding 12px 20px
+
++do(1170)
+  .videos__title
+    font-size 42px
+    margin-bottom 35px
+    &:after
+      size 64px 79px
+      margin-left 30px
+
+  .videos-item
+    size 210px 145px
+    &__play-button
+      size 38px
+      margin-top -19px
+      margin-left -19px
+    &__name
+      font-size 14px
+      padding 10px 15px
+
++do(950)
+  .videos__title
+    font-size 34px
+    &:after
+      size 50px 62px
+      margin-left 30px
+
+  .videos-item
+    size 180px 125px
+    &__play-button
+      size 34px
+      margin-top -17px
+      margin-left -17px
+    &__name
+      font-size 12px
+
++do(850)
+  .videos__list
+    margin 0 -15px
+
++do(620)
+  .videos__title
+    font-size 24px
+    &:after
+      size 44px 54px
+
+  .videos-item
+    size 140px 97px
+    margin 0 5px
+    &__play-button
+      size 28px
+      margin-top -14px
+      margin-left -14px
+    &__name
+      font-size 11px

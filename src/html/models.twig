@@ -1,0 +1,456 @@
+{% extends "common/base.twig" %}
+
+{% block body_mod %}{% endblock %}
+{% block body %}
+<div class="base block">
+    <div class="base__wrapper block-wrapper">
+        <div class="base__main">
+            <div class="breadcrumbs base__breadcrumbs">
+                <ul class="breadcrumbs__list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a href="#" itemprop="item"><span itemprop="name">Главная</span></a>
+                        <meta itemprop="position" content="1">
+                    </li>
+                    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a href="#" itemprop="item"><span itemprop="name">Ремонт телефонов</span></a>
+                        <meta itemprop="position" content="2">
+                    </li>
+                </ul>
+            </div>
+            <h1 class="base__title">Ремонт Apple в Казани</h1>
+            <div class="base__model selectize">
+                <select js-selectize class="" placeholder="Выберите устройство и модель">
+                    <option value=""></option>
+                    <optgroup label="iPhone">
+                        <option value="iPhone 4">iPhone 4</option>
+                        <option value="iPhone 4S">iPhone 4S</option>
+                        <option value="iPhone 5">iPhone 5</option>
+                        <option value="iPhone 5C">iPhone 5C</option>
+                        <option value="iPhone 5S">iPhone 5S</option>
+                        <option value="iPhone 6">iPhone 6</option>
+                        <option value="iPhone 6 Plus">iPhone 6 Plus</option>
+                        <option value="iPhone 6S">iPhone 6S</option>
+                        <option value="iPhone 6S Plus">iPhone 6S Plus</option>
+                        <option value="iPhone 7">iPhone 7</option>
+                        <option value="iPhone 7 Plus">iPhone 7 Plus</option>
+                        <option value="iPhone 8">iPhone 8</option>
+                        <option value="iPhone 8 Plus">iPhone 8 Plus</option>
+                        <option value="iPhone X">iPhone X</option>
+                        <option value="iPhone XR">iPhone XR</option>
+                        <option value="iPhone XS">iPhone XS</option>
+                        <option value="iPhone XS Max">iPhone XS Max</option>
+                        <option value="iPhone 11">iPhone 11</option>
+                        <option value="iPhone 11 Pro">iPhone 11 Pro</option>
+                        <option value="iPhone 11 Pro Max">iPhone 11 Pro Max</option>
+                        <option value="iPhone 12">iPhone 12</option>
+                        <option value="iPhone 12 Pro">iPhone 12 Pro</option>
+                        <option value="iPhone 12 Pro Max">iPhone 12 Pro Max</option>
+                    </optgroup>
+                </select>
+                <button js-selectize-button class="selectize__button"></button>
+            </div>
+            <div class="base__advantages">
+                <div class="base__advantages-item base__advantages-item_waiting">Бесплатная диагностика</div>
+                <div class="base__advantages-item base__advantages-item_clock">Ремонт за 20 мин от 390₽</div>
+                <div class="base__advantages-item base__advantages-item_shield">100% гарантия</div>
+                <div class="base__advantages-item base__advantages-item_cpu">Запчасти класса оригинал</div>
+            </div>
+            <div class="base__contacts">
+                <div class="base__contacts-title">Получи бесплатную консультацию</div>
+                <div class="base__contacts-items">
+                    <a href="" class="base__contacts-item base__contacts-item_whatsapp"></a>
+                    <a href="" class="base__contacts-item base__contacts-item_telegram"></a>
+                    <a href="" class="base__contacts-item base__contacts-item_vk"></a>
+                    <a href="tel:88432070155" class="base__contacts-item base__contacts-item_phone">8 (843) 207-01-55</a>
+                </div>
+            </div>
+        </div>
+        <div class="base__side">
+            <div class="base__side-decor {#base__side-decor_small#}">
+                <img src="/images/base.svg" alt="">
+            </div>
+            <div class="base__side-img">
+                <img src="/images/Illustration.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="models block">
+    <div class="models__wrapper block-wrapper">
+        <div class="models__title">Выберите свой Samsung</div>
+        <div class="models__side">
+            <div class="models__img"><img src="/images/model-samsung-big.png" alt=""></div>
+            <div class="models__name">Samsung</div>
+            <a href="#" class="button button_nobg button_orange models__button">Перейти к ремонту Samsung</a>
+        </div>
+        <div class="models__items">
+            <a href="" class="models__item">Galaxy Note</a>
+            <a href="" class="models__item">Galaxy Note 2</a>
+            <a href="" class="models__item">Galaxy Note 3</a>
+            <a href="" class="models__item">Galaxy Note 4</a>
+            <a href="" class="models__item">Galaxy Note 10</a>
+            <a href="" class="models__item">Galaxy Note 10+</a>
+            <a href="" class="models__item">Galaxy Note 10 Lite</a>
+            <a href="" class="models__item">Galaxy Note 20</a>
+            <a href="" class="models__item">Galaxy Note 20+</a>
+            <a href="" class="models__item">Galaxy Note 20 Ultra</a>
+            <a href="" class="models__item">Galaxy Z Flip</a>
+            <a href="" class="models__item">Galaxy J3 2017 SM-J330</a>
+            <a href="" class="models__item">Galaxy J5 SM-J510</a>
+            <a href="" class="models__item">Galaxy J5 SM-J530</a>
+            <a href="" class="models__item">Galaxy J7 SM-J730</a>
+            <a href="" class="models__item">Galaxy J1 SM-J120</a>
+            <a href="" class="models__item">Galaxy J3 2016 SM-J320</a>
+            <a href="" class="models__item">Galaxy J4 Plus SM-J415</a>
+            <a href="" class="models__item">Galaxy J5 SM-J500</a>
+            <a href="" class="models__item">Galaxy J6 SM-J600</a>
+            <a href="" class="models__item">Galaxy J7 SM-J710</a>
+            <a href="" class="models__item">Galaxy Grand 2</a>
+            <a href="" class="models__item">Galaxy J4 2018 SM-J400</a>
+            <a href="" class="models__item">Galaxy J2 2018 J250</a>
+            <a href="" class="models__item">Galaxy A6</a>
+            <a href="" class="models__item">Galaxy A3 2016</a>
+            <a href="" class="models__item">Galaxy A5 2016</a>
+            <a href="" class="models__item">Galaxy A3 2017</a>
+            <a href="" class="models__item">Galaxy A5 2017</a>
+            <a href="" class="models__item">Galaxy A6 Plus</a>
+            <a href="" class="models__item">Galaxy A5 SM-A500</a>
+            <a href="" class="models__item">Galaxy A7 SM-A720</a>
+            <a href="" class="models__item">Galaxy A7 2018 SM-A750</a>
+            <a href="" class="models__item">Galaxy A9 2018</a>
+            <a href="" class="models__item">Galaxy A8</a>
+            <a href="" class="models__item">Galaxy A8 (2018)</a>
+            <a href="" class="models__item">Galaxy A8 Plus</a>
+            <a href="" class="models__item">Galaxy A10</a>
+            <a href="" class="models__item">Galaxy A01</a>
+            <a href="" class="models__item">Galaxy A01 Core</a>
+            <a href="" class="models__item">Galaxy A02s</a>
+            <a href="" class="models__item">Galaxy A11</a>
+            <a href="" class="models__item">Galaxy A12</a>
+            <a href="" class="models__item">Galaxy A20</a>
+            <a href="" class="models__item">Galaxy A20s</a>
+            <a href="" class="models__item">Galaxy A21s</a>
+            <a href="" class="models__item">Galaxy A30</a>
+            <a href="" class="models__item">Galaxy A30s</a>
+            <a href="" class="models__item">Galaxy A31</a>
+            <a href="" class="models__item">Galaxy A40</a>
+            <a href="" class="models__item">Galaxy A41</a>
+            <a href="" class="models__item">Galaxy A50</a>
+            <a href="" class="models__item">Galaxy A51</a>
+            <a href="" class="models__item">Galaxy A60</a>
+            <a href="" class="models__item">Galaxy A70</a>
+            <a href="" class="models__item">Galaxy A71</a>
+            <a href="" class="models__item">Galaxy A80</a>
+            <a href="" class="models__item">Galaxy M01</a>
+            <a href="" class="models__item">Galaxy M11</a>
+            <a href="" class="models__item">Galaxy M21</a>
+            <a href="" class="models__item">Galaxy M30s</a>
+            <a href="" class="models__item">Galaxy M31</a>
+            <a href="" class="models__item">Galaxy M31s</a>
+            <a href="" class="models__item">Galaxy M51</a>
+            <a href="" class="models__item">Galaxy S5</a>
+            <a href="" class="models__item">Galaxy S5 mini</a>
+            <a href="" class="models__item">Glaxy S6</a>
+            <a href="" class="models__item">Galaxy S6 Edge</a>
+            <a href="" class="models__item">Galaxy S6 Edge Plus</a>
+            <a href="" class="models__item">Galaxy S7</a>
+            <a href="" class="models__item">Galaxy S7 Edge</a>
+            <a href="" class="models__item">Galaxy S8</a>
+            <a href="" class="models__item">Galaxy S8 Plus</a>
+            <a href="" class="models__item">Galaxy S9</a>
+            <a href="" class="models__item">Galaxy S9 plus</a>
+            <a href="" class="models__item">Galaxy s10e</a>
+            <a href="" class="models__item">Galaxy S10</a>
+            <a href="" class="models__item">Galaxy S10 Plus</a>
+            <a href="" class="models__item">Galaxy s10 Plus</a>
+            <a href="" class="models__item">Galaxy s20</a>
+            <a href="" class="models__item">Galaxy S20 Ultra</a>
+            <a href="" class="models__item">Galaxy S21 Ultra 5G</a>
+            <a href="" class="models__item">Galaxy S21+ 5G</a>
+            <a href="" class="models__item">Galaxy S20 FE</a>
+        </div>
+    </div>
+</div>
+<div class="advantages block">
+    <div class="advantages__wrapper block-wrapper">
+        <div class="advantages__title">Наши преимущества</div>
+        <div class="advantages__items">
+            <div class="advantages__item advantages-item advantages-item_diagnostics">
+                <div class="advantages-item__img">
+                    <img src="/images/advantages-magnifier.png" alt="">
+                </div>
+                <div class="advantages-item__title">Диагностика</div>
+                <div class="advantages-item__text">Мы бесплатно проведём для<br>вас диагностику<br>даже в случае отказа</div>
+            </div>
+            <div class="advantages__item advantages-item advantages-item_timing">
+                <div class="advantages-item__img">
+                    <img src="/images/advantages-clock.png" alt="">
+                </div>
+                <div class="advantages-item__title">Сроки</div>
+                <div class="advantages-item__text"><span style="font-size: 18px;">95%</span> выполняются<br>в день обращения</div>
+            </div>
+            <div class="advantages__item advantages-item advantages-item_quality">
+                <div class="advantages-item__img">
+                    <img src="/images/advantages-diamond.png" alt="">
+                </div>
+                <div class="advantages-item__title">Качество</div>
+                <div class="advantages-item__text">Наша ремонтно-техническая база - одна из лучших<br>в Казани!</div>
+            </div>
+            <div class="advantages__item advantages-item advantages-item_available">
+                <div class="advantages-item__img">
+                    <img src="/images/advantages-reach.png" alt="">
+                </div>
+                <div class="advantages-item__title">Доступность</div>
+                <div class="advantages-item__text">Мы работаем 7 дней в неделю,<br>365 дней в году</div>
+            </div>
+            <div class="advantages__item advantages-item advantages-item_reputation">
+                <div class="advantages-item__img">
+                    <img src="/images/advantages-speach.png" alt="">
+                </div>
+                <div class="advantages-item__title">Репутация</div>
+                <div class="advantages-item__text">Нас рекомендуют<br>друзьям!</div>
+            </div>
+            <div class="advantages__item advantages-item advantages-item_pro">
+                <div class="advantages-item__img">
+                    <img src="/images/advantages-pro.png" alt="">
+                </div>
+                <div class="advantages-item__title">Профессионализм</div>
+                <div class="advantages-item__text">У нас работают<br>только профессионалы!</div>
+            </div>
+            <div class="advantages__item advantages-item advantages-item_warranty">
+                <div class="advantages-item__img">
+                    <img src="/images/advantages-warranty.png" alt="">
+                </div>
+                <div class="advantages-item__title">Гарантия</div>
+                <div class="advantages-item__text">По завершении ремонта мы даем гарантию на выполненную работу</div>
+            </div>
+            <div class="advantages__item advantages-item advantages-item_accessories">
+                <div class="advantages-item__img">
+                    <img src="/images/advantages-battery.png" alt="">
+                </div>
+                <div class="advantages-item__title">Качественные комплектующие</div>
+                <div class="advantages-item__text">Каждую запчасть мы проверяем<br>перед установкой</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="consultation consultation_small block">
+    <div class="consultation__wrapper block-wrapper">
+        <div class="consultation__body">
+            <div class="consultation__title">Есть вопросы?<br>Получи бесплатную консультацию</div>
+            <div class="consultation__links">
+                <a href="" class="consultation__link consultation__link_whatsapp"></a>
+                <a href="" class="consultation__link consultation__link_telegram"></a>
+                <a href="" class="consultation__link consultation__link_vk"></a>
+                <a href="" class="consultation__link consultation__link_phone"></a>
+            </div>
+            <a href="tel:88432070155" class="consultation__button button button_orange">+7 (843) 207 - 01 - 55</a>
+        </div>
+    </div>
+</div>
+<div class="promotions block">
+    <div class="promotions__wrapper block-wrapper">
+        <div class="promotions__title">Наши акции</div>
+        <div class="promotions__buttons"></div>
+        <div js-promotions-slider class="promotions__slider">
+            <div class="promotions__slide">
+                <div class="promotions__item promotions-item promotions-item_1">
+                    <div class="promotions-item__img"><img src="/images/gift.png" alt=""></div>
+                    <div class="promotions-item__inner">
+                        <div class="promotions-item__top-text">Акция</div>
+                        <div class="promotions-item__title">Получи защитное стекло в подарок</div>
+                        <div class="promotions-item__text">При замене модуля iPhone получи защитное стекло в подарок</div>
+                        <a href="" class="promotions-item__link">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="promotions__slide">
+                <div class="promotions__item promotions-item promotions-item_2">
+                    <div class="promotions-item__img"><img src="/images/lock.png" alt=""></div>
+                    <div class="promotions-item__inner">
+                        <div class="promotions-item__top-text">Акция</div>
+                        <div class="promotions-item__title">Ремонт под ключ.  <br>3 услуги = 1 цена!</div>
+                        <div class="promotions-item__text">При замене любых 3-х услуг получи скидку</div>
+                        <a href="" class="promotions-item__link">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="promotions__slide">
+                <div class="promotions__item promotions-item promotions-item_3">
+                    <div class="promotions-item__img"><img src="/images/sale.png" alt=""></div>
+                    <div class="promotions-item__inner">
+                        <div class="promotions-item__top-text">Акция</div>
+                        <div class="promotions-item__title">40% скидка</div>
+                        <div class="promotions-item__text">Приобрети 3 услуги + 2 товара = получи 40% скидку на всю сумму</div>
+                        <a href="" class="promotions-item__link">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="promotions__slide">
+                <div class="promotions__item promotions-item promotions-item_1">
+                    <div class="promotions-item__img"><img src="/images/gift.png" alt=""></div>
+                    <div class="promotions-item__inner">
+                        <div class="promotions-item__top-text">Акция</div>
+                        <div class="promotions-item__title">Получи защитное стекло в подарок</div>
+                        <div class="promotions-item__text">При замене модуля iPhone получи защитное стекло в подарок</div>
+                        <a href="" class="promotions-item__link">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $("[js-promotions-slider]").slick({
+                variableWidth: true,
+                centerMode: true,
+                centerPadding: "0",
+                infinite: true,
+                slidesToShow: 3,
+                appendArrows: $(".promotions__buttons"),
+                prevArrow: '<a href="" class="promotions__button promotions__button_left" role="button"></a>',
+                nextArrow: '<a href="" class="promotions__button promotions__button_right" role="button"></a>'
+            });
+        </script>
+    </div>
+</div>
+<div class="instagram block">
+    {#    <div class="instagram__decor"><img src="/images/instagram-decor.svg" alt=""></div>#}
+    <div class="instagram__wrapper block-wrapper">
+        <div class="instagram__header">
+            <a href="#" class="instagram__link">
+                <img src="/images/instagram.png" alt="">
+            </a>
+            <div class="instagram__title">Довольные клиенты</div>
+        </div>
+        <div class="instagram__items">
+            <div class="instagram__item"><img src="/images/instagram1.png" alt=""></div>
+            <div class="instagram__item"><img src="/images/instagram2.png" alt=""></div>
+            <div class="instagram__item"><img src="/images/instagram3.png" alt=""></div>
+            <div class="instagram__item"><img src="/images/instagram3.png" alt=""></div>
+            <div class="instagram__item"><img src="/images/instagram3.png" alt=""></div>
+            <div class="instagram__item"><img src="/images/instagram3.png" alt=""></div>
+            <div class="instagram__item"><img src="/images/instagram3.png" alt=""></div>
+        </div>
+    </div>
+</div>
+<div itemprop="articleBody" class="description block">
+    <div class="description__wrapper block-wrapper">
+        <div class="description__text">
+            <h2>Замена стекла iPhone</h2>
+            <br>
+            Замена стекла айфона является одной из популярнейших услуг, предоставляемых сервисом. Ежедневно в руках мастеров, попадают десятки мобильных телефонов, ранее имеющих повреждения механического характера. Как и многие другие виды ремонтных услуг, доступных у нас, замена стекла iPhone осуществляется всего
+            в течение часа.
+            <br>
+            <br>
+            Замена стекла айфона является одной из популярнейших услуг, предоставляемых сервисом. Ежедневно в руках мастеров, попадают десятки мобильных телефонов, ранее имеющих повреждения механического характера. Как и многие другие виды ремонтных услуг, доступных у нас, замена стекла iPhone осуществляется всего
+            в течение часа.
+        </div>
+        <div class="description__decor"><img src="/images/hand.png" alt=""></div>
+        <div class="description__links">
+            <div class="description__prompt">Поделиться</div>
+            <a href="" class="description__link description__link_facebook"></a>
+            <a href="" class="description__link description__link_twitter"></a>
+            <a href="" class="description__link description__link_vk"></a>
+            <a href="" class="description__link description__link_instagram"></a>
+            <a href="" class="description__link description__link_tiktok"></a>
+        </div>
+    </div>
+</div>
+<div class="malfunctions block">
+    <div class="malfunctions__wrapper block-wrapper">
+        <div class="malfunctions__title">Неисправности смартфонов</div>
+        <div class="malfunctions__items">
+            <a href="#" class="malfunctions__item malfunctions-item">
+                <div class="malfunctions-item__img"><img src="\images\malfunctions\glass.svg" alt=""></div>
+                <div class="malfunctions-item__text">Замена стекла</div>
+            </a>
+            <a href="#" class="malfunctions__item malfunctions-item">
+                <div class="malfunctions-item__img"><img src="\images\malfunctions\screen.svg" alt=""></div>
+                <div class="malfunctions-item__text">Замена экрана</div>
+            </a>
+            <a href="#" class="malfunctions__item malfunctions-item">
+                <div class="malfunctions-item__img"><img src="\images\malfunctions\battery.svg" alt=""></div>
+                <div class="malfunctions-item__text">Замена аккумулятора</div>
+            </a>
+            <a href="#" class="malfunctions__item malfunctions-item">
+                <div class="malfunctions-item__img"><img src="\images\malfunctions\volume.svg" alt=""></div>
+                <div class="malfunctions-item__text">Замена динамика</div>
+            </a>
+            <a href="#" class="malfunctions__item malfunctions-item">
+                <div class="malfunctions-item__img"><img src="\images\malfunctions\bell.svg" alt=""></div>
+                <div class="malfunctions-item__text">Замена звонка</div>
+            </a>
+            <a href="#" class="malfunctions__item malfunctions-item">
+                <div class="malfunctions-item__img"><img src="\images\malfunctions\vibration.svg" alt=""></div>
+                <div class="malfunctions-item__text">Замена вибромотора</div>
+            </a>
+            <a href="#" class="malfunctions__item malfunctions-item">
+                <div class="malfunctions-item__img"><img src="\images\malfunctions\power.svg" alt=""></div>
+                <div class="malfunctions-item__text">Замена кнопки включения</div>
+            </a>
+            <a href="#" class="malfunctions__item malfunctions-item">
+                <div class="malfunctions-item__img"><img src="\images\malfunctions\git-pull-request.svg" alt=""></div>
+                <div class="malfunctions-item__text">Замена контролера питания</div>
+            </a>
+            <a href="#" class="malfunctions__item malfunctions-item">
+                <div class="malfunctions-item__img"><img src="\images\malfunctions\audio-cable.svg" alt=""></div>
+                <div class="malfunctions-item__text">Замена аудио разъёма</div>
+            </a>
+            <a href="#" class="malfunctions__item malfunctions-item">
+                <div class="malfunctions-item__img"><img src="\images\malfunctions\camera.svg" alt=""></div>
+                <div class="malfunctions-item__text">Замена фронтальной камеры</div>
+            </a>
+            <a href="#" class="malfunctions__item malfunctions-item">
+                <div class="malfunctions-item__img"><img src="\images\malfunctions\camera2.svg" alt=""></div>
+                <div class="malfunctions-item__text">Замена задней камеры</div>
+            </a>
+            <a href="#" class="malfunctions__item malfunctions-item">
+                <div class="malfunctions-item__img"><img src="\images\malfunctions\vibration.svg" alt=""></div>
+                <div class="malfunctions-item__text">Замена вибромотора</div>
+            </a>
+            <a href="#" class="malfunctions__item malfunctions-item">
+                <div class="malfunctions-item__img"><img src="\images\malfunctions\touch.svg" alt=""></div>
+                <div class="malfunctions-item__text">Замена кнопки Home</div>
+            </a>
+            <a href="#" class="malfunctions__item malfunctions-item">
+                <div class="malfunctions-item__img"><img src="\images\malfunctions\usb-cable.svg" alt=""></div>
+                <div class="malfunctions-item__text">Замена системного разъёма</div>
+            </a>
+            <a href="#" class="malfunctions__item malfunctions-item">
+                <div class="malfunctions-item__img"><img src="\images\malfunctions\logo-apple.svg" alt=""></div>
+                <div class="malfunctions-item__text">Восстановление Apple ID</div>
+            </a>
+            <a href="#" class="malfunctions__item malfunctions-item">
+                <div class="malfunctions-item__img"><img src="\images\malfunctions\command-symbol.svg" alt=""></div>
+                <div class="malfunctions-item__text">Замена ПО</div>
+            </a>
+            <a href="#" class="malfunctions__item malfunctions-item">
+                <div class="malfunctions-item__img"><img src="\images\malfunctions\water-sharp.svg" alt=""></div>
+                <div class="malfunctions-item__text">Восстановление после воды</div>
+            </a>
+            <a href="#" class="malfunctions__item malfunctions-item">
+                <div class="malfunctions-item__img"><img src="\images\malfunctions\unknown.svg" alt=""></div>
+                <div class="malfunctions-item__text">Неизвестная проблема</div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="consultation consultation_big consultation_gray block">
+    <div class="consultation__wrapper block-wrapper">
+        <div class="consultation__title consultation__title">Запись на ремонт / консультация</div>
+        <div class="consultation__body">
+            <div class="consultation__links">
+                <a href="" class="consultation__link consultation__link_whatsapp"></a>
+                <a href="" class="consultation__link consultation__link_telegram"></a>
+                <a href="" class="consultation__link consultation__link_vk"></a>
+                <a href="" class="consultation__link consultation__link_phone"></a>
+            </div>
+            <div class="consultation__buttons">
+                <a href="#" class="consultation__button button">Позвоните мне</a>
+                <span>или</span>
+                <a href="tel:88432070155" class="consultation__button button button_orange">+7 (843) 207 - 01 - 55</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

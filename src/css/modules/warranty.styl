@@ -1,0 +1,147 @@
+.warranty
+  padding-top 100px
+  &__title
+    color $color-dark
+    font-size 32px
+    line-height 1
+    font-weight 600
+    text-align center
+    &_2
+      text-align left
+  &__row
+    display flex
+    align-items center
+    position relative
+  &__text
+    position relative
+    color $color-dark
+    font-size 18px
+    margin-top 50px
+    &_1
+      padding-left 138px
+    &_2
+      width 555px
+  &__img
+    flex-shrink 0
+    &_1
+      margin-top -150px
+      margin-left -100px
+    &_2
+      margin-top -100px
+      margin-left auto
+
+.warranty-periods
+  margin-top 140px
+  &__list
+    display flex
+    justify-content center
+    align-items center
+    margin-top 50px
+  &-item
+    size 270px 400px
+    box-sizing border-box
+    background $color-white
+    &__img
+      size 155px
+      display flex
+      justify-content center
+      align-items flex-start
+      border-radius 50%
+      margin 40px auto 0
+    &__logo
+      size 30px 40px
+      opacity 0.5
+      margin 30px auto 0
+    &__name
+      color $color-dark
+      font-size 28px
+      font-weight 600
+      text-align center
+      margin-top 10px
+    &__number
+      color $color-green
+      font-size 22px
+      font-weight 500
+      text-align center
+      margin-top 10px
+
+    &_left
+      border-radius 32px 0 0 32px
+      & .warranty-periods-item__img
+        background #D1ECFD
+
+    &_right
+      border-radius 0 32px 32px 0
+      & .warranty-periods-item__img
+        background #FFBA79
+
+    &_center
+      height 460px
+      background linear-gradient(90deg, #C9D6FF 0%, #E2E2E2 100%)
+      border-radius 32px
+      padding-top 30px
+      & .warranty-periods-item__img
+        background #908CFF
+      & .warranty-periods-item__number
+        color $color-orange
+
++do(1000)
+  .warranty__text
+    font-size 16px
+    &_1
+      padding-left 40px
+  .warranty__img_2
+    width 220px
+
++do(900)
+  .warranty__img_1
+    width 300px
+
++do(800)
+  .warranty__img_2
+    width 140px
+    position absolute
+    top -40px
+    right 0
+
++do(650)
+  .warranty__title
+    font-size 24px
+  .warranty__img_1
+    position absolute
+    margin 0
+    bottom -100px
+    left -150px
+  .warranty__text
+    font-size 14px
+    &_1
+
+      background #ffffffc4
+      border 2px solid #E8E8E8
+      border-radius 25px
+      padding 17px
+
+  .warranty-periods-item
+    size 120px 200px
+    &__img
+      size 75px
+      margin-top 15px
+      img
+        height 64px
+    &__logo
+      size 16px 25px
+      margin-top 10px
+    &__name
+      font-size 16px
+    &__number
+      font-size 14px
+      margin-top 0
+
+    &_left
+      border-radius 18px 0 0 18px
+    &_center
+      height 230px
+      border-radius 18px
+      padding-top 15px
+    &_right
+      border-radius 0 18px 18px 0
